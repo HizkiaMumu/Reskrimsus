@@ -4,6 +4,14 @@
   cursor: pointer !important;
 }
 
+.title-atas{
+  font-size: 20px;
+}
+
+.sub-title-atas{
+  font-size: 12px;
+}
+
 /* end custom */
 #logoLanding{
   width: 50%;
@@ -17,5 +25,13 @@
       width: 30%;
       height: auto;
       margin-top: -70px !important;
+    }
+
+    .title-atas{
+      font-size: 34px;
+    }
+
+    .sub-title-atas{
+      font-size: 16px;
     }
 }

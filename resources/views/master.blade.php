@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brizzle | Responsive Bootstrap Landing Page Template</title>
+    <title>@yield('title')</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Themesdesign" />
@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-template.css" />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
     <link rel="stylesheet" href="css/style.css">
+    @yield('style')
 
 </head>
 
@@ -57,7 +58,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#home">HOME</a>
                         </li>
 
                         <li class="nav-item">
@@ -82,30 +83,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#strukturOrganisasi">Struktur Organisasi</a>
-                        </li>
-
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#subdit1">Subdit I</a>
+                            <a class="nav-link" href="#strukturOrganisasi">STRUKTUR ORGANISASI</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#subdit2">Subdit II</a>
-                        </li>
-
-                         <li class="nav-item">
-                            <a class="nav-link" href="#subdit3">Subdit III</a>
-                        </li>
-
-                         <li class="nav-item">
-                            <a class="nav-link" href="#subdit4">Subdit IV</a>
-                        </li> -->
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#caseManagement">Case Management</a>
+                            <a class="nav-link" href="https://robinops.bareskrim.polri.go.id/">CASE MANAGEMENT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="#contact">CONTACT</a>
                         </li>
                     </ul>
 
@@ -114,26 +99,9 @@
         </nav>
         <!-- Header end  -->
 
-        <!-- Home start -->
-         <section class="bg-home bg-home-full" id="home">
-            <div class="bg-dark-overlay"></div>
-            <div class="home-center">
-                <div class="home-desc-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center text-white">
-                                    <img src="images/logo.png" alt="Logo" id="logoLanding">
-                                    <h1 class="home-title mx-auto mt-4">DIREKTORAT RESERSE KRIMINAL KHUSUS<br><b>POLDA KALIMANTAN TIMUR</b></h1>
-                                    <p class="home-subtitle mx-auto pt-2">Bersama mewujudkan pelayanan penyelidikan dan penyidikan yang profesional, prosedural, proposional, transparan, akuntabel, dan dapat dipercaya masyarakat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- home end -->
+        <!-- Content start -->
+        @yield('content')
+        <!-- Content end -->
 
         <!-- Back to top -->
         <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
@@ -152,6 +120,7 @@
         <script src="js/switcher.js"></script>
         <!-- Custom js -->
         <script src="js/app-template.js"></script>
+        @yield('script')
     </body>
 
 
