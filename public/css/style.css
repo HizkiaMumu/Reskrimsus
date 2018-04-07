@@ -5,18 +5,18 @@
 }
 
 .title-atas{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .sub-title-atas{
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* end custom */
 #logoLanding{
   width: 50%;
   height: auto;
-  margin-top: -90px !important;
+  margin-top: 0px !important;
 }
 
 @media only screen and (min-width: 768px) {
@@ -24,7 +24,7 @@
     #logoLanding{
       width: 30%;
       height: auto;
-      margin-top: -70px !important;
+      margin-top: 0px !important;
     }
 
     .title-atas{

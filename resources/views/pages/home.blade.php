@@ -5,8 +5,9 @@
 @endsection
 @section('content')
 
-  <section class="bg-home bg-home-full" id="home">
+  <section class="section bg-video bg-home-full" id="home">
      <div class="bg-dark-overlay"></div>
+     <a id="video" class="player" data-property="{videoURL:'http://youtu.be/QRsVn_6zaxI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
      <div class="home-center">
          <div class="home-desc-center">
              <div class="container">
@@ -26,5 +27,7 @@
 
 @endsection
 @section('script')
-
+  <script>
+    $(".player").mb_YTPlayer();
+  </script>
 @endsection

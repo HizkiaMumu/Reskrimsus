@@ -116,6 +116,8 @@
         <script src="js/owl.carousel.min.js"></script>
         <!-- Magnific Popup -->
         <script src="js/jquery.magnific-popup.min.js"></script>
+        <!--Yt Plyer-->
+        <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
         <!-- switcher js -->
         <script src="js/switcher.js"></script>
         <!-- Custom js -->
