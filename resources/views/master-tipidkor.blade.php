@@ -49,7 +49,10 @@
                     <img src="images/logo-light.png" alt="" class="img-fluid logo-light" >
                 </a> -->
 
-                <a class="navbar-brand" href="#">Ditreskrimsus</a>
+                <a class="navbar-brand" href="#">
+                  <img src="images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
+                  TIPIDKOR
+                </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="mdi mdi-menu"></span>
@@ -62,24 +65,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#htck">HTCK</a>
+                            <a class="nav-link" href="#">NEWS</a>
                         </li>
 
                         <li class="nav-item">
-                          <div class="btn-group">
-                            <a class="nav-link dropdown-toggle pointerHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              SUBDIT
-                            </a>
-                            <div class="dropdown-menu" style="background: #262829 !important;">
-                              <a class="dropdown-item" href="#">Subdit I (INDAGSI)</a>
-                              <!-- <div class="dropdown-divider"></div> -->
-                              <a class="dropdown-item" href="#">Subdit II (PPUKDM)</a>
-                              <!-- <div class="dropdown-divider"></div> -->
-                              <a class="dropdown-item" href="/tipidkor">Subdit III (TIPIDKOR)</a>
-                              <!-- <div class="dropdown-divider"></div> -->
-                              <a class="dropdown-item" href="#">Subdit IV (TIPIDTER)</a>
-                            </div>
-                          </div>
+                            <a class="nav-link" href="#htck">HTCK</a>
                         </li>
 
                         <li class="nav-item">
@@ -87,10 +77,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://robinops.bareskrim.polri.go.id/">CASE MANAGEMENT</a>
+                            <a class="nav-link" href="#">ZONA INTEGRITAS</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">CONTACT</a>
+                            <a class="nav-link" target="_blank" href="https://pusiknas.polri.go.id/Home/LandingPage">SP2HP</a>
                         </li>
                     </ul>
 

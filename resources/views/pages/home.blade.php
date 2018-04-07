@@ -7,7 +7,7 @@
 
   <section class="section bg-video bg-home-full" id="home">
      <div class="bg-dark-overlay"></div>
-     <a id="video" class="player" data-property="{videoURL:'http://youtu.be/QRsVn_6zaxI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+     <a id="video" class="player" data-property="{videoURL:'https://youtu.be/QfURcwx91ug',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
      <div class="home-center">
          <div class="home-desc-center">
              <div class="container">

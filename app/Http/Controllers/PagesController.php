@@ -11,4 +11,8 @@ class PagesController extends Controller
       return view('pages/home');
     }
 
+    public function tipidkor(){
+      return view('pages/tipidkor/home');
+    }
+
 }
