@@ -29,23 +29,44 @@
 @section('content')
 
   <div class="row">
-    <div class="col-lg-4 col-md-12">
-      <div class="card" style="">
-        <div class="card-content">
-          <img class="card-img-top img-fluid" src="../../../app-assets/images/carousel/25.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Smart Wearable</h4>
-            <p class="card-text">Oat cake ice cream candy chocolate cake chocolate cake cotton
-              candy.
-            </p>
+
+    @foreach($berita as $item)
+      <div class="col-lg-4 col-md-12">
+        <div class="card" style="">
+          <div class="card-content">
+            <img class="card-img-top img-fluid" src="../../../app-assets/images/carousel/25.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{ $item->title }}</h4>
+              <p class="card-text">{{ str_replace('&nbsp;-', ' ', strip_tags(str_limit($item->isi, 100))) }}</p>
+              <p class="card-text">Ditulis oleh <b>{{ $item->penulis }}</b></p>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <span class="float-left">
+
+            </span>
+            <span class="float-right">
+              <div class="btn-group">
+                <button type="button" class="btn btn-info btn">Tindakan</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(60px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="#">
+                    <i class="la la-trash"></i>
+                    Hapus
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="la la-edit"></i>
+                    Edit
+                  </a>
+                </div>
+              </div>
+            </span>
           </div>
         </div>
-        <div class="card-footer text-muted">
-          <span class="float-left">$349</span>
-          <span class="float-right">Add To Cart <i class="la la-cart-plus"></i></span>
-        </div>
       </div>
-    </div>
+    @endforeach
+
   </div>
 
 @endsection
@@ -57,7 +78,7 @@
     $("#listBerita").addClass("active");
 
     $(document).ready(function(){
-      
+
     });
 
   </script>

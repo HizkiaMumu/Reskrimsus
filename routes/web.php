@@ -13,8 +13,14 @@ Route::get('/logout', 'UsersController@logout'); // logout
 
 // Dashboard --
 Route::group(['middleware' => 'auth'], function(){
+  // Pages Admin --
   Route::get('/admin', 'AdminPagesController@dashboard');
   Route::get('/admin/berita', 'AdminPagesController@berita');
+  // -- End Pages Admin
+
+  // CRUD BERITA
   Route::get('/admin/berita/tambah-berita', 'AdminPagesController@tambahBerita');
+  Route::post('/admin/berita/tambah-berita', 'BeritaController@createBerita');
+  // -- End CRUD BERITA
 });
 // -- End Dashboard

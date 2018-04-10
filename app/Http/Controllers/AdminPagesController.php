@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Berita;
 
 class AdminPagesController extends Controller
 {
@@ -16,7 +17,8 @@ class AdminPagesController extends Controller
     }
 
     public function berita(){
-      return view('dashboard/berita');
+      $data['berita'] = Berita::all();
+      return view('dashboard/berita', $data);
     }
 
     public function tambahBerita(){

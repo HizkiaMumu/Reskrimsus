@@ -30,6 +30,8 @@
   <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/morris.css">
   <link rel="stylesheet" type="text/css" href="/app-assets/fonts/simple-line-icons/style.min.css">
   <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.min.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -189,6 +191,8 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <script src="/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
   <script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
   <script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
+  <script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+  <script src="/app-assets/js/scripts/extensions/toastr.min.js" type="text/javascript"></script>
   <script src="/app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
   <script src="/ckeditor/ckeditor.js"></script>
   <!-- END PAGE VENDOR JS-->

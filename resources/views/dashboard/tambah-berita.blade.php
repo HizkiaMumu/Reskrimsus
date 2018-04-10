@@ -34,11 +34,12 @@
         </div>
         <div class="card-content collapse show">
           <div class="card-body">
-            <form class="form">
+            <form class="form" action="/admin/berita/tambah-berita" method="POST">
+              {{ csrf_field() }}
               <div class="form-body">
                 <div class="form-group">
-                  <label for="judul">Judul Artikel</label>
-                  <input type="text" name="judul" class="form-control" id="judul" placeholder="Masukan judul berita...">
+                  <label for="title">Judul Artikel</label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Masukan judul berita...">
                 </div>
                 <div class="form-group">
                   <label for="isi">Isi Artikel</label>
@@ -46,7 +47,7 @@
                 </div>
               </div>
               <div class="form-actions">
-                <button type="button" class="btn btn-primary round btn-min-width btn-block">Submit</button>
+                <button type="submit" class="btn btn-primary round btn-min-width btn-block">Submit</button>
               </div>
             </form>
           </div>
@@ -58,6 +59,7 @@
 
 @endsection
 @section('script')
+
 
   <script>
 
@@ -80,5 +82,12 @@
     });
 
   </script>
+
+  @if(session('OK'))
+    <script>
+      console.log("ok");
+      toastr.success('Berhasil menambahkan berita!', 'Success!');
+    </script>
+  @endif
 
 @endsection
