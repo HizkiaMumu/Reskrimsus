@@ -50,7 +50,7 @@
                 <button type="button" class="btn btn-info btn">Tindakan</button>
                 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(60px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/admin/berita/hapus-berita/{{ $item->id }}">
                     <i class="la la-trash"></i>
                     Hapus
                   </a>
@@ -82,5 +82,12 @@
     });
 
   </script>
+
+  @if(session('OK'))
+    <script>
+      console.log("ok");
+      toastr.success({{ session('OK') }}, 'Success!');
+    </script>
+  @endif
 
 @endsection

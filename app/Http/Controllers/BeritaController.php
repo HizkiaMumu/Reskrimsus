@@ -16,4 +16,10 @@ class BeritaController extends Controller
       return redirect()->back()->with('OK', 'Berhasil menambahkan berita.');
     }
 
+    public function deleteBerita($id){
+      $data = Berita::find($id);
+      $data->delete();
+      return redirect()->back()->with('OK', 'Berhasil menghapus data.');
+    }
+
 }

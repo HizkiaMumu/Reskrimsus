@@ -86,7 +86,7 @@
   @if(session('OK'))
     <script>
       console.log("ok");
-      toastr.success('Berhasil menambahkan berita!', 'Success!');
+      toastr.success({{ session("OK") }}, 'Success!');
     </script>
   @endif
 

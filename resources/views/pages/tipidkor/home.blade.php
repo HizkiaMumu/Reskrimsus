@@ -25,6 +25,114 @@
      </div>
   </section>
 
+  <section class="section bg-light" id="features">
+    <div class="container">
+      <div class="row pt-5 mt-2 vertical-content">
+        <div class="col-lg-5">
+          <div class="features-content">
+            <div class="features-title">
+              <h5>TINDAK PIDANA KORUPSI <br> POLDA KALIMANTAN TIMUR</h5>
+              <p class="mt-3 text-muted">
+                Subdit III Tipidkor adalah salah satu bagian/sub dari Ditreskrimsus yang bertugas melakukan penyelidikan dan penyidikan tindak pidana Perbankan yang terjadi di daerah hukum Polda.
+                <br><br>
+                Subdit III Tipidkor menyelenggarakan fungsi :
+              </p>
+            </div>
+
+            <div class="features-desc">
+              <div class="features-desc-icon mb-2">
+                <i class="mdi mdi-arrow-right text-custom mr-3"></i>
+                <p class="text-muted">Penyelidikan dan penyidikan Tindak Pidana Korupsi yang terjadi di daerah hukum Polda</p>
+              </div>
+
+              <div class="features-desc-icon mb-2">
+                <i class="mdi mdi-arrow-right text-custom mr-3"></i>
+                <p class="text-muted">Pemberkasan dan penyelesaian berkas perkara sesuai dengan ketentuan administrasi penyelidikan dan penyidikan Tindak Pidana Korupsi.</p>
+              </div>
+
+              <div class="features-desc-icon mb-2">
+                <i class="mdi mdi-arrow-right text-custom mr-3"></i>
+                <p class="text-muted">Penerapan manajemen anggaran, serta manajemen penyelidikan dan penyidikan Tindak Pidana Korupsi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 offset-lg-1">
+          <div class="Features-img">
+            <img src="images/features-1.png" alt="" class="img-fluid mx-auto d-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center mx-auto">
+            <div class="section-title-icon">
+              <i class="pe-7s-star text-custom"></i>
+            </div>
+            <h5>Unit</h5>
+            <p class="mt-3 text-muted">Dalam melaksanakan tugasnya, Subdit III Tipidkor dibantu oleh sejumlah unit yang bertugas membantu pelaksanaan tugas dan fungsinya.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-3">
+          <div class="services-box text-center mt-2 p-3">
+            <div class="services-icon text-custom mb-3">
+              <i class="pe-7s-culture"></i>
+            </div>
+            <div class="services-desc">
+              <h4 class="">Unit I</h4>
+              <p class="text-muted  pt-2">Dana Usaha Negara dan Dana Pemerintah</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="services-box text-center mt-2 p-3">
+            <div class="services-icon text-custom mb-3">
+              <i class="pe-7s-cash"></i>
+            </div>
+            <div class="services-desc">
+              <h4 class="">Unit II</h4>
+              <p class="text-muted  pt-2">Dana Kredit Usaha</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="services-box text-center mt-2 p-3">
+            <div class="services-icon text-custom mb-3">
+              <i class="pe-7s-piggy"></i>
+            </div>
+            <div class="services-desc">
+              <h4 class="">Unit III</h4>
+              <p class="text-muted  pt-2">Dana Bantuan</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="services-box text-center mt-2 p-3">
+            <div class="services-icon text-custom mb-3">
+              <i class="pe-7s-tools"></i>
+            </div>
+            <div class="services-desc">
+              <h4 class="">Unit IV</h4>
+              <p class="text-muted  pt-2">Dana Pembangunan dan Proyek</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 @endsection
 @section('script')
   <script>
