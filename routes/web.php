@@ -3,6 +3,7 @@
 // Pages --
 Route::get('/', 'PagesController@home');
 Route::get('/tipidkor', 'PagesController@tipidkor');
+Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
 // -- End Pages
 
 // Auth --

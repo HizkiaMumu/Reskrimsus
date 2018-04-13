@@ -15,4 +15,8 @@ class PagesController extends Controller
       return view('pages/tipidkor/home');
     }
 
+    public function zonaIntegritas(){
+      return view('pages/tipidkor/zi');
+    }
+
 }
