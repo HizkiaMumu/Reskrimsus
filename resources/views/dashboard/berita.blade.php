@@ -55,10 +55,11 @@
                     Hapus
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item editBerita">
                     <i class="la la-edit"></i>
                     Edit
                   </a>
+                  <input type="hidden" value="{{ $item->id }}">
                 </div>
               </div>
             </span>
@@ -69,6 +70,27 @@
 
   </div>
 
+  <!-- MODALS -->
+    <div class="modal" id="modalBerita">
+      <form class="form" action="" method="POST" id="formBerita">
+        {{ csrf_field() }}
+        <div class="form-body">
+          <div class="form-group">
+            <label for="title">Judul Artikel</label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Masukan judul berita...">
+          </div>
+          <div class="form-group">
+            <label for="isi">Isi Artikel</label>
+            <textarea name="isi" class="form-control" id="isi" placeholder="Silahkan tulis artikel anda..." rows="8" cols="80"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary round btn-min-width btn-block">Submit</button>
+        </div>
+      </form>
+    </div>
+  <!-- END MODALS -->
+
 @endsection
 @section('script')
 
@@ -76,8 +98,30 @@
 
     $(".menu-navigasi").removeClass("active");
     $("#listBerita").addClass("active");
+    $("#modalBerita").hide();
+    $(".modal").iziModal({
+      title: 'Edit Berita',
+      fullscreen: true,
+      padding: 15,
+     });
+
 
     $(document).ready(function(){
+
+      $(document).on("click", ".editBerita", function(){
+        
+        var id = $(this).next().val();
+        $.ajax({
+          method : "GET",
+          url    : "/admin/berita/edit-berita/" + id,
+        }).done(function(data){  
+          $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);  
+          $("input[name='title']").val(data.title);
+          $("textarea[name='isi']").text(data.isi);
+          $("#modalBerita").iziModal("open");
+        });
+
+      });
 
     });
 
