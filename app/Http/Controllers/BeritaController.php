@@ -22,4 +22,17 @@ class BeritaController extends Controller
       return redirect()->back()->with('OK', 'Berhasil menghapus data.');
     }
 
+    public function editBerita($id){
+      $data = Berita::find($id);
+      return $data;
+    }
+
+    public function updateBerita(Request $request, $id)
+    {
+      $data = $request->all();
+      $kirim = Berita::find($id);
+      $kirim->update($data);
+      return redirect()->back()->with("OK", "Berhasim mengupdate data.");
+    }
+
 }
