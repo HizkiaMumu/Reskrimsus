@@ -23,6 +23,8 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/berita/tambah-berita', 'AdminPagesController@tambahBerita');
   Route::post('/admin/berita/tambah-berita', 'BeritaController@createBerita');
   Route::get('/admin/berita/hapus-berita/{id}', 'BeritaController@deleteBerita');
+  Route::get('/admin/berita/edit-berita/{id}', 'BeritaController@editBerita');
+  Route::post('/admin/berita/update-berita/{id}', 'BeritaController@updateBerita');
   // -- End CRUD BERITA
 });
 // -- End Dashboard

@@ -16,7 +16,7 @@
                          <div class="text-center text-white">
                              <img src="images/logo.png" alt="Logo" id="logoLanding">
                              <h1 class="home-title mx-auto mt-4 title-atas">TINDAK PIDANA KORUPSI<br><b>POLDA KALIMANTAN TIMUR</b></h1>
-                             <p class="home-subtitle mx-auto pt-2 sub-title-atas">Bersama mewujudkan pelayanan penyelidikan dan penyidikan yang profesional, prosedural, proposional, transparan, akuntabel, dan dapat dipercaya masyarakat.</p>
+                             <p class="home-subtitle mx-auto pt-2 sub-title-atas">Mewujudkan Kalimantan Timur WBK (Wilayah Bebas Korupsi)</p>
                          </div>
                      </div>
                  </div>
