@@ -18,6 +18,7 @@ class AdminPagesController extends Controller
 
     public function berita(){
       $data['berita'] = Berita::all();
+      $data['no_berita'] = 1;
       return view('dashboard/berita', $data);
     }
 
