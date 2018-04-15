@@ -75,35 +75,46 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h3>List Berita dari subdit {{ Auth::user()->subdit }}</h3>
+          <h4 class="card-title" id="basic-layout-form">Tabel list berita dari subdit {{ Auth::user()->subdit }}</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+              <li><a data-action="close"><i class="ft-x"></i></a></li>
+            </ul>
+          </div>
         </div>
-        <div class="card-body">
-          <table class="table" id="beritaTable" width="100%">
-            <thead>
-              <tr>
-                <th width="5%">No</th>
-                <th>Title</th>
-                <th class="text-center" width="20%">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($berita as $item)
+        <div class="card-content collapse show">
+          <div class="card-body">
+            <table class="table" id="beritaTable" width="100%">
+              <thead>
                 <tr>
-                  <td>{{ $no_berita++ }}</td>
-                  <td>{{ $item->title }}</td>
-                  <td class="text-center">
-                    <a class="btn btn-outline-danger" href="/admin/berita/hapus-berita/{{ $item->id }}">
-                      <i class="la la-trash"></i>
-                    </a>
-                    <a class="btn btn-outline-primary editBerita">
-                      <i class="la la-edit"></i>
-                    </a>
-                    <input type="hidden" value="{{ $item->id }}">
-                  </td>
+                  <th width="5%">No</th>
+                  <th>Title</th>
+                  <th class="text-center" width="20%">Action</th>
                 </tr>
-              @endforeach
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                @foreach ($berita as $item)
+                  <tr>
+                    <td>{{ $no_berita++ }}</td>
+                    <td>{{ $item->title }}</td>
+                    <td class="text-center">
+                      <a class="btn btn-outline-danger" href="/admin/berita/hapus-berita/{{ $item->id }}">
+                        <i class="la la-trash"></i>
+                      </a>
+                      <a class="btn btn-outline-primary editBerita">
+                        <i class="la la-edit"></i>
+                      </a>
+                      <input type="hidden" value="{{ $item->id }}">
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

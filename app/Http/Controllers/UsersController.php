@@ -28,4 +28,31 @@ class UsersController extends Controller
       return redirect()->back();
     }
 
+    public function createUser(Request $request)
+    {
+      $data = $request->all();
+      $kirim = User::create($data);
+      return redirect()->back()->with('OK', 'Berhasil menambahkan user.');
+    }
+
+    public function deleteUser($id){
+      $data = User::find($id);
+      $data->delete();
+      return redirect()->back()->with('OK', 'Berhasil menghapus user.');
+    }
+
+    public function editUser($id)
+    {
+      $data = User::find($id);
+      return $data;
+    }
+
+    public function updateUser(Request $request, $id)
+    {
+      $data = $request->all();
+      $kirim = User::find($id);
+      $kirim->update($data);
+      return redirect()->back()->with('OK', 'Berhasil mengupdate user.');
+    }
+
 }
