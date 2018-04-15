@@ -55,10 +55,11 @@
                     Hapus
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="/admin/berita/edit-berita/{{ $item->id }}" class="dropdown-item">
+                  <a class="dropdown-item editBerita">
                     <i class="la la-edit"></i>
                     Edit
                   </a>
+                  <input type="hidden" value="{{ $item->id }}">
                 </div>
               </div>
             </span>
@@ -91,12 +92,13 @@
                   <td>{{ $no_berita++ }}</td>
                   <td>{{ $item->title }}</td>
                   <td class="text-center">
-                    <a class="btn btn-outline-primary" href="/admin/berita/hapus-berita/{{ $item->id }}">
+                    <a class="btn btn-outline-danger" href="/admin/berita/hapus-berita/{{ $item->id }}">
                       <i class="la la-trash"></i>
                     </a>
-                    <a class="btn btn-outline-danger" href="/admin/berita/edit-berita/{{ $item->id }}">
+                    <a class="btn btn-outline-primary editBerita">
                       <i class="la la-edit"></i>
                     </a>
+                    <input type="hidden" value="{{ $item->id }}">
                   </td>
                 </tr>
               @endforeach
@@ -109,7 +111,7 @@
   </div>
 
   <!-- MODALS -->
-    <div class="modal" id="modalBerita">
+    <div class="iziModal" id="modalBerita">
       <form class="form" action="" method="POST" id="formBerita">
         {{ csrf_field() }}
         <div class="form-body">
@@ -134,11 +136,49 @@
 
   <script>
 
-    $(".menu-navigasi").removeClass("active");
-    $("#listBerita").addClass("active");
-    $("#modalBerita").hide();
+    $('.menu-navigasi').removeClass('active');
+    $('#listBerita').addClass('active');
+    $('.iziModal').iziModal({
+      fullscreen: true,
+      padding: 15,
+      zindex: 2000,
+      title: 'Edit Berita',
+    })
+    $('#beritaTable').DataTable();
+
+    /* CK EDITOR */
+
+    var token = $('meta[name="_token"]').attr('content'); 
+    var options = {
+      filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+      filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
+      filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+      filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=' + token
+    };
+
+    CKEDITOR.replace('isi', options);
+
+    /* CK EDITOR END */
+
 
     $(document).ready(function(){
+
+      $(document).on('click', '.editBerita', function(){
+        
+        var id = $(this).next().val();
+
+        $.ajax({
+          method: 'GET',
+          url: '/admin/berita/edit-berita/' + id,
+        }).done(function (data){
+          $('#title').val(data.title);
+          CKEDITOR.instances['isi'].setData(data.isi);
+        });
+        
+        $('#formBerita').attr('action', '/admin/berita/update-berita/' + id);
+        $('#modalBerita').iziModal('open');
+
+      });
 
     });
 
@@ -146,8 +186,7 @@
 
   @if(session('OK'))
     <script>
-      console.log("ok");
-      toastr.success({{ session('OK') }}, 'Success!');
+      toastr.success('{{ session("OK") }}', 'Success!');
     </script>
   @endif
 
