@@ -34,7 +34,7 @@
   <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
   @yield('style')
   <!-- END Custom CSS-->

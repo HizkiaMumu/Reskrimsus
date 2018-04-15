@@ -23,8 +23,8 @@ class BeritaController extends Controller
     }
 
     public function editBerita($id){
-      $data = Berita::find($id);
-      return $data;
+      $data['edit'] = Berita::find($id);
+      return view('dashboard.edit-berita', $data);
     }
 
     public function updateBerita(Request $request, $id)

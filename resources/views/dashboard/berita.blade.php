@@ -15,7 +15,7 @@
       <div class="breadcrumb-wrapper col-12">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">{{ Auth::user()->subdit }}</a>
+            <a href="index.html">Subdit {{ Auth::user()->subdit }}</a>
           </li>
           <li class="breadcrumb-item active">
             Berita
@@ -55,11 +55,10 @@
                     Hapus
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item editBerita">
+                  <a href="/admin/berita/edit-berita/{{ $item->id }}" class="dropdown-item">
                     <i class="la la-edit"></i>
                     Edit
                   </a>
-                  <input type="hidden" value="{{ $item->id }}">
                 </div>
               </div>
             </span>
@@ -68,6 +67,45 @@
       </div>
     @endforeach
 
+  </div>
+
+  <div class="row">
+    
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h3>List Berita dari subdit {{ Auth::user()->subdit }}</h3>
+        </div>
+        <div class="card-body">
+          <table class="table" id="beritaTable" width="100%">
+            <thead>
+              <tr>
+                <th width="5%">No</th>
+                <th>Title</th>
+                <th class="text-center" width="20%">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($berita as $item)
+                <tr>
+                  <td>{{ $no_berita++ }}</td>
+                  <td>{{ $item->title }}</td>
+                  <td class="text-center">
+                    <a class="btn btn-outline-primary" href="/admin/berita/hapus-berita/{{ $item->id }}">
+                      <i class="la la-trash"></i>
+                    </a>
+                    <a class="btn btn-outline-danger" href="/admin/berita/edit-berita/{{ $item->id }}">
+                      <i class="la la-edit"></i>
+                    </a>
+                  </td>
+                </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
   </div>
 
   <!-- MODALS -->
@@ -99,29 +137,8 @@
     $(".menu-navigasi").removeClass("active");
     $("#listBerita").addClass("active");
     $("#modalBerita").hide();
-    $(".modal").iziModal({
-      title: 'Edit Berita',
-      fullscreen: true,
-      padding: 15,
-     });
-
 
     $(document).ready(function(){
-
-      $(document).on("click", ".editBerita", function(){
-        
-        var id = $(this).next().val();
-        $.ajax({
-          method : "GET",
-          url    : "/admin/berita/edit-berita/" + id,
-        }).done(function(data){  
-          $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);  
-          $("input[name='title']").val(data.title);
-          $("textarea[name='isi']").text(data.isi);
-          $("#modalBerita").iziModal("open");
-        });
-
-      });
 
     });
 
