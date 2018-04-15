@@ -103,19 +103,20 @@
       title: 'Edit Berita',
       fullscreen: true,
       padding: 15,
+      zindex: 2000
      });
 
 
     $(document).ready(function(){
 
       $(document).on("click", ".editBerita", function(){
-        
+
         var id = $(this).next().val();
         $.ajax({
           method : "GET",
           url    : "/admin/berita/edit-berita/" + id,
-        }).done(function(data){  
-          $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);  
+        }).done(function(data){
+          $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);
           $("input[name='title']").val(data.title);
           $("textarea[name='isi']").text(data.isi);
           $("#modalBerita").iziModal("open");

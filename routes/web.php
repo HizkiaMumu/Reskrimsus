@@ -12,6 +12,10 @@ Route::post('/login', 'UsersController@auth'); // login action
 Route::get('/logout', 'UsersController@logout'); // logout
 // -- End Auth
 
+// Email --
+Route::post('/kirim-email', 'EmailController@kirim'); // Kirim Email ke dashboard
+// -- End Email
+
 // Dashboard --
 Route::group(['middleware' => 'auth'], function(){
   // Pages Admin --
