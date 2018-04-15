@@ -19,7 +19,7 @@ class BeritaController extends Controller
     public function deleteBerita($id){
       $data = Berita::find($id);
       $data->delete();
-      return redirect()->back()->with('OK', 'Berhasil menghapus data.');
+      return redirect()->back()->with('OK', 'Berhasil menghapus berita.');
     }
 
     public function editBerita($id){
@@ -32,7 +32,7 @@ class BeritaController extends Controller
       $data = $request->all();
       $kirim = Berita::find($id);
       $kirim->update($data);
-      return redirect()->back()->with("OK", "Berhasil mengupdate data.");
+      return redirect()->back()->with("OK", "Berhasil mengupdate berita.");
     }
 
 }

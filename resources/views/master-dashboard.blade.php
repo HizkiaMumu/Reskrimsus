@@ -160,6 +160,15 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </ul>
         </li>
 
+        @if (Auth::user()->level == 0)
+          <li class="nav-item menu-navigasi" id="listUsers">
+            <a href="/admin/users">
+              <i class="la la-user"></i>
+              <span class="menu-title">List Users</span>
+            </a>
+          </li>
+        @endif
+
       </ul>
 
     </div>
