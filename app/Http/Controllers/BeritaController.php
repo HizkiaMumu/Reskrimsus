@@ -23,8 +23,8 @@ class BeritaController extends Controller
     }
 
     public function editBerita($id){
-      $data['edit'] = Berita::find($id);
-      return view('dashboard.edit-berita', $data);
+      $data = Berita::find($id);
+      return $data;
     }
 
     public function updateBerita(Request $request, $id)
@@ -32,7 +32,7 @@ class BeritaController extends Controller
       $data = $request->all();
       $kirim = Berita::find($id);
       $kirim->update($data);
-      return redirect()->back()->with("OK", "Berhasim mengupdate data.");
+      return redirect()->back()->with("OK", "Berhasil mengupdate data.");
     }
 
 }
