@@ -4,6 +4,7 @@
 Route::get('/', 'PagesController@home');
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
+Route::get('/tipidkor/news', 'TipidkorNewsController@home');
 // -- End Pages
 
 // Auth --
@@ -37,6 +38,6 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/berita/edit-berita/{id}', 'BeritaController@editBerita');
   Route::get('/admin/berita/hapus-berita/{id}', 'BeritaController@deleteBerita');
   Route::post('/admin/berita/update-berita/{id}', 'BeritaController@updateBerita');
-  // -- End CRUD 
+  // -- End CRUD
 });
 // -- End Dashboard

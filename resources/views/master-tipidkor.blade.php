@@ -66,7 +66,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">NEWS</a>
+                            <a class="nav-link" href="/tipidkor/news">NEWS</a>
                         </li>
 
                         <li class="nav-item">
