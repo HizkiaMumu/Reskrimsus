@@ -34,8 +34,9 @@
   <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   @yield('style')
   <!-- END Custom CSS-->
 </head>
@@ -159,6 +160,15 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </ul>
         </li>
 
+        @if (Auth::user()->level == 0)
+          <li class="nav-item menu-navigasi" id="listUsers">
+            <a href="/admin/users">
+              <i class="la la-user"></i>
+              <span class="menu-title">List Users</span>
+            </a>
+          </li>
+        @endif
+
       </ul>
 
     </div>
@@ -205,9 +215,9 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="/app-assets/js/scripts/pages/dashboard-sales.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
   @yield('script')
   <!-- END PAGE LEVEL JS-->
-</body>
 
-<!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Apr 2018 03:30:40 GMT -->
+</body>
 </html>

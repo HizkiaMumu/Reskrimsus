@@ -15,7 +15,7 @@
       <div class="breadcrumb-wrapper col-12">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">{{ Auth::user()->subdit }}</a>
+            <a href="index.html">Subdit {{ Auth::user()->subdit }}</a>
           </li>
           <li class="breadcrumb-item active">
             Berita
@@ -70,8 +70,59 @@
 
   </div>
 
+  <div class="row">
+    
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title" id="basic-layout-form">Tabel list berita dari subdit {{ Auth::user()->subdit }}</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+              <li><a data-action="close"><i class="ft-x"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body">
+            <table class="table" id="beritaTable" width="100%">
+              <thead>
+                <tr>
+                  <th width="5%">No</th>
+                  <th>Title</th>
+                  <th class="text-center" width="20%">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($berita as $item)
+                  <tr>
+                    <td>{{ $no_berita++ }}</td>
+                    <td>{{ $item->title }}</td>
+                    <td class="text-center">
+                      <a class="btn btn-outline-danger" href="/admin/berita/hapus-berita/{{ $item->id }}">
+                        <i class="la la-trash"></i>
+                      </a>
+                      <a class="btn btn-outline-primary editBerita">
+                        <i class="la la-edit"></i>
+                      </a>
+                      <input type="hidden" value="{{ $item->id }}">
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
   <!-- MODALS -->
-    <div class="modal" id="modalBerita">
+    <div class="iziModal" id="modalBerita">
       <form class="form" action="" method="POST" id="formBerita">
         {{ csrf_field() }}
         <div class="form-body">
@@ -96,22 +147,37 @@
 
   <script>
 
-    $(".menu-navigasi").removeClass("active");
-    $("#listBerita").addClass("active");
-    $("#modalBerita").hide();
-    $(".modal").iziModal({
-      title: 'Edit Berita',
+    $('.menu-navigasi').removeClass('active');
+    $('#listBerita').addClass('active');
+    $('.iziModal').iziModal({
       fullscreen: true,
       padding: 15,
-      zindex: 2000
-     });
+      zindex: 2000,
+      title: 'Edit Berita',
+    });
+    $('#beritaTable').DataTable();
+
+    /* CK EDITOR */
+
+    var token = $('meta[name="_token"]').attr('content'); 
+    var options = {
+      filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+      filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
+      filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+      filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=' + token
+    };
+
+    CKEDITOR.replace('isi', options);
+
+    /* CK EDITOR END */
 
 
     $(document).ready(function(){
 
-      $(document).on("click", ".editBerita", function(){
-
+      $(document).on('click', '.editBerita', function(){
+        
         var id = $(this).next().val();
+
         $.ajax({
           method : "GET",
           url    : "/admin/berita/edit-berita/" + id,
@@ -120,7 +186,15 @@
           $("input[name='title']").val(data.title);
           $("textarea[name='isi']").text(data.isi);
           $("#modalBerita").iziModal("open");
+          method: 'GET',
+          url: '/admin/berita/edit-berita/' + id,
+        }).done(function (data){
+          $('#title').val(data.title);
+          CKEDITOR.instances['isi'].setData(data.isi);
         });
+        
+        $('#formBerita').attr('action', '/admin/berita/update-berita/' + id);
+        $('#modalBerita').iziModal('open');
 
       });
 
@@ -130,8 +204,7 @@
 
   @if(session('OK'))
     <script>
-      console.log("ok");
-      toastr.success({{ session('OK') }}, 'Success!');
+      toastr.success('{{ session("OK") }}', 'Success!');
     </script>
   @endif
 
