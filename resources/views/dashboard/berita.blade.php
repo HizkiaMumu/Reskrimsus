@@ -154,7 +154,7 @@
       padding: 15,
       zindex: 2000,
       title: 'Edit Berita',
-    })
+    });
     $('#beritaTable').DataTable();
 
     /* CK EDITOR */
@@ -179,6 +179,13 @@
         var id = $(this).next().val();
 
         $.ajax({
+          method : "GET",
+          url    : "/admin/berita/edit-berita/" + id,
+        }).done(function(data){
+          $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);
+          $("input[name='title']").val(data.title);
+          $("textarea[name='isi']").text(data.isi);
+          $("#modalBerita").iziModal("open");
           method: 'GET',
           url: '/admin/berita/edit-berita/' + id,
         }).done(function (data){

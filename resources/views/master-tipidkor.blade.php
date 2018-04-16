@@ -10,6 +10,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Themesdesign" />
+    @yield('meta')
 
     <link rel="shortcut icon" href="images/logo_polda.png">
 

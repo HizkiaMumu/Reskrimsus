@@ -3,6 +3,7 @@
 // Pages --
 Route::get('/', 'PagesController@home');
 Route::get('/tipidkor', 'PagesController@tipidkor');
+Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
 // -- End Pages
 
 // Auth --
@@ -10,6 +11,10 @@ Route::get('/login', ['as' => 'login', 'uses' => 'AdminPagesController@login']);
 Route::post('/login', 'UsersController@auth'); // login action
 Route::get('/logout', 'UsersController@logout'); // logout
 // -- End Auth
+
+// Email --
+Route::post('/kirim-email', 'EmailController@kirim'); // Kirim Email ke dashboard
+// -- End Email
 
 // Dashboard --
 Route::group(['middleware' => 'auth'], function(){
