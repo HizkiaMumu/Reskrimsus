@@ -71,7 +71,7 @@
   </div>
 
   <div class="row">
-    
+
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
@@ -118,7 +118,7 @@
         </div>
       </div>
     </div>
-  
+
   </div>
 
   <!-- MODALS -->
@@ -159,7 +159,7 @@
 
     /* CK EDITOR */
 
-    var token = $('meta[name="_token"]').attr('content'); 
+    var token = $('meta[name="_token"]').attr('content');
     var options = {
       filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
       filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&responseType=json&_token=' + token,
@@ -175,7 +175,7 @@
     $(document).ready(function(){
 
       $(document).on('click', '.editBerita', function(){
-        
+
         var id = $(this).next().val();
 
         $.ajax({
@@ -185,16 +185,9 @@
           $("#formBerita").attr("action", "/admin/berita/update-berita/" + id);
           $("input[name='title']").val(data.title);
           $("textarea[name='isi']").text(data.isi);
-          $("#modalBerita").iziModal("open");
-          method: 'GET',
-          url: '/admin/berita/edit-berita/' + id,
-        }).done(function (data){
-          $('#title').val(data.title);
           CKEDITOR.instances['isi'].setData(data.isi);
+          $("#modalBerita").iziModal("open");
         });
-        
-        $('#formBerita').attr('action', '/admin/berita/update-berita/' + id);
-        $('#modalBerita').iziModal('open');
 
       });
 
