@@ -34,12 +34,19 @@
         </div>
         <div class="card-content collapse show">
           <div class="card-body">
-            <form class="form" action="/admin/berita/tambah-berita" method="POST">
+            <form class="form" action="/admin/berita/tambah-berita" method="POST" enctype="multipart/form-data">
               {{ csrf_field() }}
               <div class="form-body">
                 <div class="form-group">
                   <label for="title">Judul Artikel</label>
                   <input type="text" name="title" class="form-control" id="title" placeholder="Masukan judul berita...">
+                </div>
+                <div class="form-group">
+                  <label for="thumbnail">Thumbnail</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01 thumbnail" name="thumbnail">
+                    <label class="custom-file-label" for="inputGroupFile01">Pilih gambar...</label>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="isi">Isi Artikel</label>

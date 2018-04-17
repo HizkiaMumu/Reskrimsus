@@ -12,6 +12,12 @@ class BeritaController extends Controller
     public function createBerita(Request $request){
       $data = $request->all();
       $data['penulis'] = Auth::user()->nama;
+      if ($request->hasFile('thumbnail')) {
+        $path = $request->file('thumbnail')->store('/public/thumbnail'); // with /public on path
+        $filename = $request->file('thumbnail')->hashName(); // remove the /public on path
+        $validPath = '/storage/thumbnail/' . $filename;
+        $data['thumbnail'] = $validPath;
+      }
       $kirim = Berita::create($data);
       return redirect()->back()->with('OK', 'Berhasil menambahkan berita.');
     }

@@ -34,7 +34,7 @@
       <div class="col-lg-4 col-md-12">
         <div class="card" style="">
           <div class="card-content">
-            <img class="card-img-top img-fluid" src="../../../app-assets/images/carousel/25.jpg" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="{{ $item->thumbnail }}" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title">{{ $item->title }}</h4>
               <p class="card-text">{{ str_replace('&nbsp;-', ' ', strip_tags(str_limit($item->isi, 100))) }}</p>
@@ -43,7 +43,7 @@
           </div>
           <div class="card-footer text-muted">
             <span class="float-left">
-
+              
             </span>
             <span class="float-right">
               <div class="btn-group">
