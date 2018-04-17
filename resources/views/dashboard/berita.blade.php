@@ -43,7 +43,7 @@
           </div>
           <div class="card-footer text-muted">
             <span class="float-left">
-              
+
             </span>
             <span class="float-right">
               <div class="btn-group">

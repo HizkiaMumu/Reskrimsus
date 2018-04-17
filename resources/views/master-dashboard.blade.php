@@ -35,6 +35,7 @@
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   @yield('style')
@@ -148,7 +149,6 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           <a href="#">
             <i class="la la-newspaper-o"></i>
             <span class="menu-title" data-i18n="nav.dash.main">Berita</span>
-            <span class="badge badge badge-info badge-pill float-right mr-2">2</span>
           </a>
           <ul class="menu-content">
             <li class="menu-navigasi" id="listBerita">
@@ -156,6 +156,9 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
             </li>
             <li class="menu-navigasi" id="tambahBerita">
               <a class="menu-item" href="/admin/berita/tambah-berita">Tambah Berita</a>
+            </li>
+            <li class="menu-navigasi" id="kategoriBerita">
+              <a class="menu-item" href="/admin/berita/kategori-berita">Kategori Berita</a>
             </li>
           </ul>
         </li>

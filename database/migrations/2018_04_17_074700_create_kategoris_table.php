@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenameColumnThmbailToThumbnailOnBeritasTable extends Migration
+class CreateKategorisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class RenameColumnThmbailToThumbnailOnBeritasTable extends Migration
      */
     public function up()
     {
-        Schema::table('beritas', function (Blueprint $table) {
-            //
+        Schema::create('kategoris', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('kategori');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class RenameColumnThmbailToThumbnailOnBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::table('beritas', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('kategoris');
     }
 }

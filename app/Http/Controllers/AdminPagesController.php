@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Kategori;
 use App\Berita;
 use App\User;
 
@@ -17,8 +18,7 @@ class AdminPagesController extends Controller
       return view('dashboard/login');
     }
 
-    public function users()
-    {
+    public function users(){
       $data['users'] = User::all();
       $data['no_users'] = 1;
       return view('dashboard/users', $data);
@@ -32,6 +32,11 @@ class AdminPagesController extends Controller
 
     public function tambahBerita(){
       return view('dashboard/tambah-berita');
+    }
+
+    public function kategori(){
+      $data['kategori'] = Kategori::all();
+      return view('dashboard/kategori-berita', $data);
     }
 
 }

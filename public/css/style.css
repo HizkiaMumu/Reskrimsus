@@ -1,5 +1,9 @@
 /* custom component */
 
+.modalKu{
+  display: none;
+}
+
 .pointerHover{
   cursor: pointer !important;
 }

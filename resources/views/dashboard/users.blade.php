@@ -29,7 +29,7 @@
 @section('content')
 
   <div class="row">
-    
+
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-  
+
   </div>
 
   <!-- MODALS -->
@@ -154,8 +154,9 @@
       padding: 15,
       zindex: 2000,
       title: 'Edit Berita',
+      headerColor: "#1E9FF2"
     })
-    
+
     $(document).on('click', '.editUser', function(){
       $('#modalUser').iziModal('open');
     });

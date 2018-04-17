@@ -13,7 +13,7 @@ class BeritasTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(0, 10) as $i) {
+        foreach (range(0, 100) as $i) {
           DB::table('beritas')->insert([
             'title' => $faker->realText($maxNbChars = 50, $indexSize = 2),
             'isi' => $faker->realText($maxNbChars = 1000),

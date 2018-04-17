@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function(){
   // Pages Admin --
   Route::get('/admin', 'AdminPagesController@dashboard');
   Route::get('/admin/berita', 'AdminPagesController@berita');
+  Route::get('/admin/berita/kategori-berita', 'AdminPagesController@kategori');
   // -- End Pages Admin
 
   // CRUD USERS --
@@ -38,6 +39,14 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/berita/edit-berita/{id}', 'BeritaController@editBerita');
   Route::get('/admin/berita/hapus-berita/{id}', 'BeritaController@deleteBerita');
   Route::post('/admin/berita/update-berita/{id}', 'BeritaController@updateBerita');
-  // -- End CRUD
+  // -- END CRUD BERITA
+
+  // CRUD KATEGORI BERITA --
+  Route::post('/admin/berita/kategori/tambah-kategori', 'BeritaController@createKategori');
+  Route::get('/admin/berita/kategori/hapus-kategori/{id}', 'BeritaController@deleteKategori');
+  Route::get('/admin/berita/kategori/edit-kategori/{id}', 'BeritaController@editKategoriDetail');
+  Route::post('/admin/berita/kategori/edit-kategori/{id}', 'BeritaController@storeEditKategori');
+  // END CRUD KATEGORI --
+
 });
 // -- End Dashboard
