@@ -31,7 +31,8 @@ class AdminPagesController extends Controller
     }
 
     public function tambahBerita(){
-      return view('dashboard/tambah-berita');
+      $data['kategori'] = Kategori::all();
+      return view('dashboard/tambah-berita', $data);
     }
 
     public function kategori(){

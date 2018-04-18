@@ -38,19 +38,28 @@
               {{ csrf_field() }}
               <div class="form-body">
                 <div class="form-group">
-                  <label for="title">Judul Artikel</label>
-                  <input type="text" name="title" class="form-control" id="title" placeholder="Masukan judul berita...">
+                  <label for="title"><b>Judul Artikel</b></label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Masukan judul berita..." required>
                 </div>
                 <div class="form-group">
-                  <label for="thumbnail">Thumbnail</label>
+                  <label for="thumbnail"><b>Thumbnail</b></label>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01 thumbnail" name="thumbnail">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01 thumbnail" name="thumbnail" accept="image/*">
                     <label class="custom-file-label" for="inputGroupFile01">Pilih gambar...</label>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="isi">Isi Artikel</label>
-                  <textarea name="isi" class="form-control" id="isi" placeholder="Silahkan tulis artikel anda..." rows="8" cols="80"></textarea>
+                  <label for="kategori"><b>Kategori</b></label>
+                  <select class="form-control" name="kategori" id="kategori" required>
+                    <option selected disabled>Pilih Kategori</option>
+                    @foreach($kategori as $item)
+                      <option value="{{ $item->kategori }}">{{ $item->kategori }}</option>
+                    @endforeach
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="isi"><b>Isi Artikel</b></label>
+                  <textarea name="isi" class="form-control" id="isi" placeholder="Silahkan tulis artikel anda..." rows="8" cols="80" required></textarea>
                 </div>
               </div>
               <div class="form-actions">
