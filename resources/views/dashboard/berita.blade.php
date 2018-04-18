@@ -30,48 +30,6 @@
 
   <div class="row">
 
-    @foreach($berita as $item)
-      <div class="col-lg-4 col-md-12">
-        <div class="card" style="">
-          <div class="card-content">
-            <img class="card-img-top img-fluid" src="{{ $item->thumbnail }}" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">{{ $item->title }}</h4>
-              <p class="card-text">{{ str_replace('&nbsp;-', ' ', strip_tags(str_limit($item->isi, 100))) }}</p>
-              <p class="card-text">Ditulis oleh <b>{{ $item->penulis }}</b></p>
-            </div>
-          </div>
-          <div class="card-footer text-muted">
-            <span class="float-left">
-
-            </span>
-            <span class="float-right">
-              <div class="btn-group">
-                <button type="button" class="btn btn-info btn">Tindakan</button>
-                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(60px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
-                  <a class="dropdown-item" href="/admin/berita/hapus-berita/{{ $item->id }}">
-                    <i class="la la-trash"></i>
-                    Hapus
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item editBerita">
-                    <i class="la la-edit"></i>
-                    Edit
-                  </a>
-                  <input type="hidden" value="{{ $item->id }}">
-                </div>
-              </div>
-            </span>
-          </div>
-        </div>
-      </div>
-    @endforeach
-
-  </div>
-
-  <div class="row">
-
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
@@ -118,6 +76,48 @@
         </div>
       </div>
     </div>
+
+  </div>
+
+  <div class="row">
+
+    @foreach($berita as $item)
+      <div class="col-lg-4 col-md-12">
+        <div class="card" style="">
+          <div class="card-content">
+            <img class="card-img-top img-fluid" src="{{ $item->thumbnail }}" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{ $item->title }}</h4>
+              <p class="card-text">{{ str_replace('&nbsp;-', ' ', strip_tags(str_limit($item->isi, 100))) }}</p>
+              <p class="card-text">Ditulis oleh <b>{{ $item->penulis }}</b></p>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <span class="float-left">
+
+            </span>
+            <span class="float-right">
+              <div class="btn-group">
+                <button type="button" class="btn btn-info btn">Tindakan</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(60px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="/admin/berita/hapus-berita/{{ $item->id }}">
+                    <i class="la la-trash"></i>
+                    Hapus
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item editBerita">
+                    <i class="la la-edit"></i>
+                    Edit
+                  </a>
+                  <input type="hidden" value="{{ $item->id }}">
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    @endforeach
 
   </div>
 
