@@ -50,10 +50,10 @@
                 </div>
                 <div class="form-group">
                   <label for="kategori"><b>Kategori</b></label>
-                  <select class="form-control" name="kategori" id="kategori" required>
+                  <select class="form-control" name="kategori_id" id="kategori" required>
                     <option selected disabled>Pilih Kategori</option>
                     @foreach($kategori as $item)
-                      <option value="{{ $item->kategori }}">{{ $item->kategori }}</option>
+                      <option value="{{ $item->id }}">{{ $item->kategori }}</option>
                     @endforeach
                   </select>
                 </div>

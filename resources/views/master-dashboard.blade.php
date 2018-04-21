@@ -38,6 +38,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.css" />
   @yield('style')
   <!-- END Custom CSS-->
 </head>
@@ -163,6 +164,22 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </ul>
         </li>
 
+        <li class="nav-item menu-navigasi" id="htck">
+          <a href="/admin/htck">
+            <i class="la la-file-text"></i>
+            <span class="menu-title">HTCK</span>
+          </a>
+        </li>
+
+        @if(Auth::user()->level == 3)
+          <li class="nav-item menu-navigasi" id="chat">
+            <a href="https://app.drift.com/inboxes/">
+              <i class="la la-comments-o"></i>
+              <span class="menu-title">Chat</span>
+            </a>
+          </li>
+        @endif
+
         @if (Auth::user()->level == 0)
           <li class="nav-item menu-navigasi" id="listUsers">
             <a href="/admin/users">
@@ -219,6 +236,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <script src="/app-assets/js/scripts/pages/dashboard-sales.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.js"></script>
   @yield('script')
   <!-- END PAGE LEVEL JS-->
 

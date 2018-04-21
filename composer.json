@@ -9,6 +9,7 @@
         "doctrine/dbal": "^2.7",
         "fideloper/proxy": "^4.0",
         "fzaninotto/faker": "^1.7",
+        "goodnesskay/laravelpdfviewer": "^1.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "unisharp/laravel-filemanager": "~1.8"

@@ -2,10 +2,20 @@
 
 // Pages --
 Route::get('/', 'PagesController@home');
+// Tipidkor Pages
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
+Route::get('/tipidkor/htck', 'PagesController@htckTipidkor');
+// Tipidkor NEWS Pages
 Route::get('/tipidkor/news', 'TipidkorNewsController@home');
+Route::get('/tipidkor/news/all', 'TipidkorNewsController@allNews');
+Route::get('/tipidkor/news/{id}', 'TipidkorNewsController@readNews');
+Route::get('/tipidkor/news/kategori/{kategori}', 'TipidkorNewsController@categoryFilter');
 // -- End Pages
+
+// FILES --
+Route::get('/htck/{namafile}', 'HtckController@showHtck');
+// END FILES --
 
 // Auth --
 Route::get('/login', ['as' => 'login', 'uses' => 'AdminPagesController@login']); // login page
@@ -14,7 +24,8 @@ Route::get('/logout', 'UsersController@logout'); // logout
 // -- End Auth
 
 // Email --
-Route::post('/kirim-email', 'EmailController@kirim'); // Kirim Email ke dashboard
+Route::post('/kirim-email', 'EmailController@kirimEmailSupport');
+Route::post('/tipidkor/news/subscribe', 'EmailController@kirimEmailSubscribe');
 // -- End Email
 
 // Dashboard --
@@ -23,6 +34,7 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin', 'AdminPagesController@dashboard');
   Route::get('/admin/berita', 'AdminPagesController@berita');
   Route::get('/admin/berita/kategori-berita', 'AdminPagesController@kategori');
+  Route::get('/admin/htck', 'AdminPagesController@htck');
   // -- End Pages Admin
 
   // CRUD USERS --
@@ -47,6 +59,12 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/berita/kategori/edit-kategori/{id}', 'BeritaController@editKategoriDetail');
   Route::post('/admin/berita/kategori/edit-kategori/{id}', 'BeritaController@storeEditKategori');
   // END CRUD KATEGORI --
+
+  // CRUD HTCK --
+  Route::post('/admin/htck/tambah-htck', 'HtckController@uploadHtck');
+  Route::get('/admin/htck/lihat-htck/{filename}', 'HtckController@showHtck');
+  Route::get('/admin/htck/hapus-htck/{id}', 'HtckController@deleteHtck');
+  // END CRUD HTCK
 
 });
 // -- End Dashboard

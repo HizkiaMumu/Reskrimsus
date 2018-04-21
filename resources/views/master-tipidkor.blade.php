@@ -12,29 +12,29 @@
     <meta name="author" content="Themesdesign" />
     @yield('meta')
 
-    <link rel="shortcut icon" href="images/logo_polda.png">
+    <link rel="shortcut icon" href="/images/logo_polda.png">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
 
     <!-- Magnificpopup Css -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
 
     <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/materialdesignicons.min.css" />
 
     <!-- themefy icon -->
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pe-icon-7-stroke.css" />
 
     <!--Slider-->
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/owl.theme.css" />
-    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/css/owl.theme.css" />
+    <link rel="stylesheet" href="/css/owl.transitions.css" />
 
     <!-- Custom  Css -->
-    <link rel="stylesheet" type="text/css" href="css/style-template.css" />
-    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style-template.css" />
+    <link href="/css/colors/default.css" rel="stylesheet" id="color-opt">
+    <link rel="stylesheet" href="/css/style.css">
     @yield('style')
 
 </head>
@@ -51,7 +51,7 @@
                 </a> -->
 
                 <a class="navbar-brand" href="#">
-                  <img src="images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
+                  <img src="/images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
                   TIPIDKOR
                 </a>
 
@@ -70,7 +70,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#htck">HTCK</a>
+                            <a class="nav-link" href="/tipidkor/htck">HTCK</a>
                         </li>
 
                         <li class="nav-item">
@@ -99,21 +99,45 @@
         <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
         <!-- javascript -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/scrollspy.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.easing.min.js"></script>
+        <script src="/js/scrollspy.min.js"></script>
         <!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
         <!-- Magnific Popup -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
         <!--Yt Plyer-->
-        <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+        <script type="text/javascript" src="/js/jquery.mb.YTPlayer.js"></script>
         <!-- switcher js -->
-        <script src="js/switcher.js"></script>
+        <script src="/js/switcher.js"></script>
         <!-- Custom js -->
-        <script src="js/app-template.js"></script>
+        <script src="/js/app-template.js"></script>
+        <!-- Start of Async Drift Code -->
+        <script>
+          !function() {
+            var t;
+            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+            t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+            t.factory = function(e) {
+              return function() {
+                var n;
+                return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+              };
+            }, t.methods.forEach(function(e) {
+              t[e] = t.factory(e);
+            }), t.load = function(t) {
+              var e, n, o, i;
+              e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+              o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+              n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+            });
+          }();
+          drift.SNIPPET_VERSION = '0.3.1';
+          drift.load('47zbfx8khx2s');
+        </script>
+        <!-- End of Async Drift Code -->
         @yield('script')
     </body>
 

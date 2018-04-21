@@ -17,7 +17,7 @@
                  <div class="row">
                      <div class="col-lg-12">
                          <div class="text-center text-white">
-                             <img src="images/logo.png" alt="Logo" id="logoLanding">
+                             <img src="/images/logo.png" alt="Logo" id="logoLanding">
                              <h1 class="home-title mx-auto mt-4 title-atas">TINDAK PIDANA KORUPSI<br><b>POLDA KALIMANTAN TIMUR</b></h1>
                              <p class="home-subtitle mx-auto pt-2 sub-title-atas">Mewujudkan Kalimantan Timur WBK (Wilayah Bebas Korupsi)</p>
                          </div>
@@ -63,7 +63,7 @@
 
         <div class="col-lg-6 offset-lg-1">
           <div class="Features-img">
-            <img src="images/features-1.png" alt="" class="img-fluid mx-auto d-block">
+            <img src="/images/features-1.png" alt="" class="img-fluid mx-auto d-block">
           </div>
         </div>
       </div>
