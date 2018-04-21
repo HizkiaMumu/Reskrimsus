@@ -15,26 +15,26 @@
     <link rel="shortcut icon" href="images/logo_polda.png">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
 
     <!-- Magnificpopup Css -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
 
     <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/materialdesignicons.min.css" />
 
     <!-- themefy icon -->
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pe-icon-7-stroke.css" />
 
     <!--Slider-->
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/owl.theme.css" />
-    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/css/owl.theme.css" />
+    <link rel="stylesheet" href="/css/owl.transitions.css" />
 
     <!-- Custom  Css -->
-    <link rel="stylesheet" type="text/css" href="css/style-template.css" />
-    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style-template.css" />
+    <link href="/css/colors/default.css" rel="stylesheet" id="color-opt">
+    <link rel="stylesheet" href="/css/style.css">
     @yield('style')
 
 </head>
@@ -99,21 +99,21 @@
         <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
         <!-- javascript -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/scrollspy.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.easing.min.js"></script>
+        <script src="/js/scrollspy.min.js"></script>
         <!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
         <!-- Magnific Popup -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
         <!--Yt Plyer-->
-        <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+        <script type="text/javascript" src="/js/jquery.mb.YTPlayer.js"></script>
         <!-- switcher js -->
-        <script src="js/switcher.js"></script>
+        <script src="/js/switcher.js"></script>
         <!-- Custom js -->
-        <script src="js/app-template.js"></script>
+        <script src="/js/app-template.js"></script>
         @yield('script')
     </body>
 

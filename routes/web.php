@@ -4,7 +4,11 @@
 Route::get('/', 'PagesController@home');
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
+// Tipidkor NEWS Pages
 Route::get('/tipidkor/news', 'TipidkorNewsController@home');
+Route::get('/tipidkor/news/all', 'TipidkorNewsController@allNews');
+Route::get('/tipidkor/news/{id}', 'TipidkorNewsController@readNews');
+Route::get('/tipidkor/news/kategori/{kategori}', 'TipidkorNewsController@categoryFilter');
 // -- End Pages
 
 // Auth --
@@ -14,7 +18,8 @@ Route::get('/logout', 'UsersController@logout'); // logout
 // -- End Auth
 
 // Email --
-Route::post('/kirim-email', 'EmailController@kirim'); // Kirim Email ke dashboard
+Route::post('/kirim-email', 'EmailController@kirimEmailSupport');
+Route::post('/tipidkor/news/subscribe', 'EmailController@kirimEmailSubscribe');
 // -- End Email
 
 // Dashboard --
