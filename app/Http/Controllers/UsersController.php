@@ -31,6 +31,7 @@ class UsersController extends Controller
     public function createUser(Request $request)
     {
       $data = $request->all();
+      $data['password'] = bcrypt($data['password']);
       $kirim = User::create($data);
       return redirect()->back()->with('OK', 'Berhasil menambahkan user.');
     }
