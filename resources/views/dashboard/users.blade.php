@@ -68,7 +68,7 @@
                     <td>{{ $item->username }}</td>
                     <td>{{ $item->level }}</td>
                     <td class="text-center">
-                      <a class="btn btn-outline-danger" href="/admin/berita/hapus-user/{{ $item->id }}">
+                      <a class="btn btn-outline-danger" href="/admin/users/hapus-user/{{ $item->id }}">
                         <i class="la la-trash"></i>
                       </a>
                       <a class="btn btn-outline-primary editUser">
