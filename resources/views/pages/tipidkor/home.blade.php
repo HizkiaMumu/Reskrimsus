@@ -63,7 +63,7 @@
 
         <div class="col-lg-6 offset-lg-1">
           <div class="Features-img">
-            <img src="images/features-1.png" alt="" class="img-fluid mx-auto d-block">
+            <img src="/images/features-1.png" alt="" class="img-fluid mx-auto d-block">
           </div>
         </div>
       </div>

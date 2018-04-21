@@ -21,7 +21,7 @@ class PagesController extends Controller
     }
 
     public function htckTipidkor(){
-      $htck = Htck::where('pemilik', 'tipidkor')->orderBy("id")->first();
+      $htck = Htck::where('pemilik', 'tipidkor')->orderBy("id", "DESC")->first();
       return redirect($htck->path);
     }
 
