@@ -155,7 +155,7 @@
 
     $('.menu-navigasi').removeClass('active');
     $('#listUsers').addClass('active');
-    var modal = $('.iziModal').iziModal({
+    $('.iziModal').iziModal({
       fullscreen: true,
       title: 'Form User',
       padding: 15,

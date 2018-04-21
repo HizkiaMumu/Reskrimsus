@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.css" />
+  <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
   @yield('style')
   <!-- END Custom CSS-->
 </head>
@@ -189,6 +190,13 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </li>
         @endif
 
+        <li class="nav-item menu-navigasi" id="strukturOrganisasi">
+          <a href="/admin/struktur-organisasi">
+            <i class="la la-sitemap"></i>
+            <span class="menu-title">Struktur Organisasi</span>
+          </a>
+        </li>
+
       </ul>
 
     </div>
@@ -237,6 +245,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.js"></script>
+  <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
   @yield('script')
   <!-- END PAGE LEVEL JS-->
 
