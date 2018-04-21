@@ -28,7 +28,7 @@ class AdminPagesController extends Controller
 
     public function berita(){
       if (Auth::user()->id == 0) {
-        $data['berita'] = Berita::();
+        $data['berita'] = Berita::orderBy("id", "DESC")->get();
       } else {
         $data['berita'] = Berita::where('user_id', Auth::user()->id)->orderBy('id', 'DESC')->get();
       }
@@ -47,7 +47,11 @@ class AdminPagesController extends Controller
     }
 
     public function htck(){
-      $data['htck'] = Htck::where('user_id', Auth::user()->id)->orderBy("id", "DESC")->get();
+      if (Auth::user()->id == 0) {
+        $data['htck'] = Htck::orderBy("id", "DESC")->get();
+      } else {
+        $data['htck'] = Htck::where('user_id', Auth::user()->id)->orderBy("id", "DESC")->get();
+      }
       $data['no_htck'] = 1;
       return view('dashboard/htck', $data);
     }

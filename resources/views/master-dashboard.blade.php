@@ -171,6 +171,15 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </a>
         </li>
 
+        @if(Auth::user()->level == 3)
+          <li class="nav-item menu-navigasi" id="chat">
+            <a href="https://app.drift.com/inboxes/">
+              <i class="la la-comments-o"></i>
+              <span class="menu-title">Chat</span>
+            </a>
+          </li>
+        @endif
+
         @if (Auth::user()->level == 0)
           <li class="nav-item menu-navigasi" id="listUsers">
             <a href="/admin/users">
