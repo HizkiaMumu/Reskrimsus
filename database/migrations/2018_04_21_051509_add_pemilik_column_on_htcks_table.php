@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DropColumnKategoriOnTableBeritas extends Migration
+class AddPemilikColumnOnHtcksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class DropColumnKategoriOnTableBeritas extends Migration
      */
     public function up()
     {
-        Schema::table('beritas', function (Blueprint $table) {
-            $table->dropColumn('kategori');
+        Schema::table('htcks', function (Blueprint $table) {
+            $table->string('pemilik');
         });
     }
 
@@ -25,7 +25,7 @@ class DropColumnKategoriOnTableBeritas extends Migration
      */
     public function down()
     {
-        Schema::table('beritas', function (Blueprint $table) {
+        Schema::table('htcks', function (Blueprint $table) {
             //
         });
     }

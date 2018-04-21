@@ -190,6 +190,7 @@
 	<script type="text/javascript" src="/news/js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="/news/js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="/news/js/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/id.js"></script>
 	<script type="text/javascript" src="/news/js/jquery.simpleWeather.min.js"></script>
 	<script type="text/javascript" src="/news/js/jquery.sticky-kit.min.js"></script>
 	<script type="text/javascript" src="/news/js/jquery.easy-ticker.min.js"></script>

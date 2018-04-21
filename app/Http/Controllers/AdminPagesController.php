@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Kategori;
 use App\Berita;
 use App\User;
+use App\Htck;
+use Auth;
 
 class AdminPagesController extends Controller
 {
@@ -25,7 +27,7 @@ class AdminPagesController extends Controller
     }
 
     public function berita(){
-      $data['berita'] = Berita::all();
+      $data['berita'] = Berita::where('user_id', Auth::user()->id)->orderBy('id', 'DESC')->get();
       $data['no_berita'] = 1;
       return view('dashboard/berita', $data);
     }
@@ -38,6 +40,12 @@ class AdminPagesController extends Controller
     public function kategori(){
       $data['kategori'] = Kategori::all();
       return view('dashboard/kategori-berita', $data);
+    }
+
+    public function htck(){
+      $data['htck'] = Htck::where('user_id', Auth::user()->id)->get();
+      $data['no_htck'] = 1;
+      return view('dashboard/htck', $data);
     }
 
 }

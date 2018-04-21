@@ -154,6 +154,7 @@
       padding: 15,
       zindex: 2000,
       title: 'Edit Berita',
+      headerColor: "#1E9FF2"
     });
     $('#beritaTable').DataTable();
 

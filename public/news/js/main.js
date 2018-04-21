@@ -67,8 +67,9 @@ jQuery(function ($) {
 		var datetime = null,
         date = null;
 		var update = function() {
-			date = moment(new Date())
-			datetime.html(date.format('dddd, MMMM D,  YYYY'));
+			date = moment(new Date());
+      date.locale("id");
+			datetime.html(date.lang("id").format('dddd, MMMM D,  YYYY'));
 		};
 		datetime = $('#date-time')
 		update();

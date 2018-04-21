@@ -22,7 +22,7 @@
                 <div class="post-content">
                   <div class="entry-meta">
                     <ul class="list-inline">
-                      <li class="publish-date"><i class="fa fa-clock-o"></i><a href="#">{{ \Carbon\Carbon::now()->diffForHumans($item->created_at) }}</a></li>
+                      <li class="publish-date"><i class="fa fa-clock-o"></i><a href="#">{{ Carbon\Carbon::parse($item->created_at)->diffForHumans(Carbon\Carbon::now()) }}</a></li>
                       <li class="views"><i class="fa fa-eye"></i><a href="#">15k</a></li>
                       <li class="loves"><i class="fa fa-heart-o"></i><a href="#">278</a></li>
                     </ul>

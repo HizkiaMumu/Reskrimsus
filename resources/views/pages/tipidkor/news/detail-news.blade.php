@@ -37,7 +37,15 @@
                         </div>
                       </div>
                       <div class="post-content">
-                        {!! $berita->isi !!}
+                        <div class="entry-meta">
+                          <ul class="list-inline">
+														<li class="posted-by"><i class="fa fa-user"></i> by <a href="#">{{ $berita->penulis }}</a></li>
+														<li class="publish-date"><a href="#"><i class="fa fa-clock-o"></i> {{ Carbon\Carbon::parse($berita->created_at)->diffForHumans(Carbon\Carbon::now()) }} </a></li>
+													</ul>
+                        </div>
+                        <div class="entry-content">
+                          {!! $berita->isi !!}
+                        </div>
                       </div>
                     </div><!--/post-->
                   </div><!--/.section-->

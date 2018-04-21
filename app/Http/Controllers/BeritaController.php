@@ -13,6 +13,7 @@ class BeritaController extends Controller
     public function createBerita(Request $request){
       $data = $request->all();
       $data['penulis'] = Auth::user()->nama;
+      $data['user_id'] = Auth::user()->id;
       if ($request->hasFile('thumbnail')) {
         $path = $request->file('thumbnail')->store('/public/thumbnail'); // with /public on path
         $filename = $request->file('thumbnail')->hashName(); // remove the /public on path

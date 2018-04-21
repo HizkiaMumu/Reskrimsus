@@ -12,7 +12,7 @@
     <meta name="author" content="Themesdesign" />
     @yield('meta')
 
-    <link rel="shortcut icon" href="images/logo_polda.png">
+    <link rel="shortcut icon" href="/images/logo_polda.png">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -51,7 +51,7 @@
                 </a> -->
 
                 <a class="navbar-brand" href="#">
-                  <img src="images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
+                  <img src="/images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
                   TIPIDKOR
                 </a>
 
@@ -70,7 +70,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#htck">HTCK</a>
+                            <a class="nav-link" href="/tipidkor/htck">HTCK</a>
                         </li>
 
                         <li class="nav-item">

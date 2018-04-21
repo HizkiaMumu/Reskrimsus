@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kategori;
 use App\Berita;
+use Carbon\Carbon;
 
 class TipidkorNewsController extends Controller
 {
+
+    public function __construct(){
+      Carbon::setLocale('id');
+    }
 
     public function home(){
       $data['berita'] = Berita::orderBy("created_at", "desc")->get();
