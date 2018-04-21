@@ -10,19 +10,23 @@
 @section('content-header')
 
   <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-    <h3 class="content-header-title mb-0 d-inline-block">List users</b></h3>
+    <h3 class="content-header-title mb-0 d-inline-block text-capitalize">List Users</h3>
     <div class="row breadcrumbs-top d-inline-block">
       <div class="breadcrumb-wrapper col-12">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">Subdit {{ Auth::user()->subdit }}</a>
+            <a href="#">Ditreskrimsus</a>
           </li>
           <li class="breadcrumb-item active">
-            Users
+            List Ussers
           </li>
         </ol>
       </div>
     </div>
+  </div>
+
+  <div class="content-header-right col-md-6 col-12 mb-2 breadcrumb-new" style="text-align: right !important;">
+    <button type="button" name="button" class="btn btn-outline-info round" id="tombolTambahUser">Tambah User</button>
   </div>
 
 @endsection
@@ -101,15 +105,15 @@
           </div>
           <div class="form-group">
             <label for="bio">Bio</label>
-            <textarea name="nama" class="form-control" id="bio" placeholder="Masukan bio..." rows="5"></textarea>
+            <textarea name="bio" class="form-control" id="bio" placeholder="Masukan bio..." rows="5"></textarea>
           </div>
           <div class="form-group">
             <label for="subdit">Subdit</label>
             <select name="subdit" class="form-control" id="subdit" required>
-              <option value="1">Subdit I</option>
-              <option value="2">Subdit II</option>
-              <option value="3">Subdit III</option>
-              <option value="4">Subdit IV</option>
+              <option value="indagsi">Subdit I (INDAGSI)</option>
+              <option value="ppukdm">Subdit II (PPUKDM)</option>
+              <option value="tipidkor">Subdit III (TIPIDKOR)</option>
+              <option value="tipidter">Subdit IV (TIPIDTER)</option>
             </select>
           </div>
           <div class="form-group">
@@ -119,24 +123,26 @@
           <div class="form-group">
             <label for="level">Level</label>
             <select name="level" class="form-control" id="level" required>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="0">0 (ADMIN)</option>
+              <option value="1">1 (INDAGSI)</option>
+              <option value="2">2 (PPUKDM)</option>
+              <option value="3">3 (TIPIDKOR)</option>
+              <option value="4">4 (TIPIDTER)</option>
+              <option value="5">5 (DITRESKRIMSUS)</option>
             </select>
           </div>
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" class="form-control" id="username" placeholder="Masukan username..." required>
           </div>
-          <div class="form-group">
+          <div class="form-group" id="inputPassword">
             <label for="password">Password</label>
-            <input type="text" name="password" class="form-control" id="password" placeholder="Masukan pasword..." required>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Masukan pasword...">
           </div>
         </div>
         <div class="form-actions">
           <button type="submit" class="btn btn-primary round btn-min-width btn-block">Submit</button>
+          <input type="reset" value="Reset" id="reset" style="display: none;">
         </div>
       </form>
     </div>
@@ -149,19 +155,38 @@
 
     $('.menu-navigasi').removeClass('active');
     $('#listUsers').addClass('active');
-    $('.iziModal').iziModal({
+    var modal = $('.iziModal').iziModal({
       fullscreen: true,
+      title: 'Form User',
       padding: 15,
       zindex: 2000,
-      title: 'Edit Berita',
       headerColor: "#1E9FF2"
     })
-
-    $(document).on('click', '.editUser', function(){
+    $(document).on('click', '#tombolTambahUser', function () {
+      $('#reset').click();
+      $('#formUser').attr('action', '/admin/users/tambah-user');
+      $('#inputPassword').show();
+      $('#password').attr('name', 'password');
       $('#modalUser').iziModal('open');
     });
-
-
+    $(document).on('click', '.editUser', function(){
+      var id = $(this).next().val();   
+      $.ajax({
+        method : 'GET',
+        url: '/admin/users/edit-user/' + id,
+      }).done(function (data) {
+        $('#nama').val(data.nama);
+        $('#bio').text(data.bio);
+        $('#subdit option[value="'+ data.subdit +'"]').attr('selected', true);
+        $('#email').val(data.email);
+        $('#level option[value="'+ data.level +'"]').attr('selected', true);
+        $('#username').val(data.username);
+      });
+      $('#inputPassword').hide();
+      $('#password').attr('name', '');
+      $('#formUser').attr('action', '/admin/users/update-user/' + id);
+      $('#modalUser').iziModal('open');
+    });
   </script>
 
   @if(session('OK'))
