@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\StrukturOrganisasi;
 use App\Kategori;
 use App\Berita;
 use App\User;
@@ -54,6 +55,13 @@ class AdminPagesController extends Controller
       }
       $data['no_htck'] = 1;
       return view('dashboard/htck', $data);
+    }
+
+    public function strukturOrganisasi()
+    {
+      $data['struktur_organisasi'] = StrukturOrganisasi::with(['atasan'])->where('subdit', Auth::user()->subdit)->get();
+      $data['no_struktur_organisasi'] = 1;
+      return view('dashboard/struktur-organisasi', $data);
     }
 
 }

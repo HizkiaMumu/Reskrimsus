@@ -33,12 +33,14 @@ Route::group(['middleware' => 'auth'], function(){
   // Pages Admin --
   Route::get('/admin', 'AdminPagesController@dashboard');
   Route::get('/admin/berita', 'AdminPagesController@berita');
+  Route::get('/admin/berita/tambah-berita', 'AdminPagesController@tambahBerita');
   Route::get('/admin/berita/kategori-berita', 'AdminPagesController@kategori');
   Route::get('/admin/htck', 'AdminPagesController@htck');
+  Route::get('/admin/users', 'AdminPagesController@users');
+  Route::get('/admin/struktur-organisasi', 'AdminPagesController@strukturOrganisasi');
   // -- End Pages Admin
 
   // CRUD USERS --
-  Route::get('/admin/users', 'AdminPagesController@users');
   Route::post('/admin/users/tambah-user', 'UsersController@createUser');
   Route::get('/admin/users/hapus-user/{id}', 'UsersController@deleteUser');
   Route::get('/admin/users/edit-user/{id}', 'UsersController@editUser');
@@ -46,7 +48,6 @@ Route::group(['middleware' => 'auth'], function(){
   // END CRUD USERS --
 
   // CRUD BERITA --
-  Route::get('/admin/berita/tambah-berita', 'AdminPagesController@tambahBerita');
   Route::post('/admin/berita/tambah-berita', 'BeritaController@createBerita');
   Route::get('/admin/berita/edit-berita/{id}', 'BeritaController@editBerita');
   Route::get('/admin/berita/hapus-berita/{id}', 'BeritaController@deleteBerita');
@@ -64,7 +65,15 @@ Route::group(['middleware' => 'auth'], function(){
   Route::post('/admin/htck/tambah-htck', 'HtckController@uploadHtck');
   Route::get('/admin/htck/lihat-htck/{filename}', 'HtckController@showHtck');
   Route::get('/admin/htck/hapus-htck/{id}', 'HtckController@deleteHtck');
-  // END CRUD HTCK
+  // END CRUD  HTCK
+  
+  // CRUD STRUKTUR ORGANISASI
+  Route::post('/admin/struktur-organisasi/tambah-struktur-organisasi', 'StrukturOrganisasiController@createStrukturOrganisasi');
+  Route::get('/admin/struktur-organisasi/hapus-struktur-organisasi/{id}', 'StrukturOrganisasiController@deleteStrukturOrganisasi');
+  Route::get('/admin/struktur-organisasi/edit-struktur-organisasi/{id}', 'StrukturOrganisasiController@editStrukturOrganisasi');
+  Route::post('/admin/struktur-organisasi/update-struktur-organisasi/{id}', 'StrukturOrganisasiController@updateStrukturOrganisasi');
+  Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
+  // END CRUD STRUKTUR ORGANISASI
 
 });
 // -- End Dashboard
