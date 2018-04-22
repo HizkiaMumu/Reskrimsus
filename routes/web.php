@@ -6,6 +6,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
 Route::get('/tipidkor/htck', 'PagesController@htckTipidkor');
+Route::get('/tipidkor/struktur-organisasi', 'PagesController@strukturOrganisasiTipidkor');
 // Tipidkor NEWS Pages
 Route::get('/tipidkor/news', 'TipidkorNewsController@home');
 Route::get('/tipidkor/news/all', 'TipidkorNewsController@allNews');

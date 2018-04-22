@@ -24,5 +24,10 @@ class PagesController extends Controller
       $htck = Htck::where('pemilik', 'tipidkor')->orderBy("id", "DESC")->first();
       return redirect($htck->path);
     }
+    
+    public function strukturOrganisasiTipidkor()
+    {
+      return view('pages/tipidkor/struktur-organisasi');
+    }
 
 }

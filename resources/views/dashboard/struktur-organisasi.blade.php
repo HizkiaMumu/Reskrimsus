@@ -1,11 +1,11 @@
 @extends('master-dashboard') 
 @section('title', 'HTCK') 
 @section('style')
-
-<style>
-
-</style>
-
+    <style>
+        .get-oc-tb, .get-up{
+            display: none;
+        }
+    </style>
 @endsection 
 
 @section('content-header')
@@ -114,7 +114,7 @@
 
     <!-- MODALS -->
     <div class="iziModal" id="modalStrukturOrganisasi">
-        <form class="form" action="" method="POST" id="formStrukturOrganisasi">
+        <form class="form" action="" method="POST" id="formStrukturOrganisasi" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-body">
                 <div class="form-group">
@@ -141,9 +141,9 @@
                     <label for="jabatan">Jabatan</label>
                     <input type="text" name="jabatan" class="form-control" id="jabatan" placeholder="Masukan jabatan...">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display: none;">
                     <label for="subdit">Subdit</label>
-                    <select name="subdit" class="form-control" id="subdit" required disabled>
+                    <select name="subdit" class="form-control" id="subdit">
                       <option value="indagsi">Subdit I (INDAGSI)</option>
                       <option value="ppukdm">Subdit II (PPUKDM)</option>
                       <option value="tipidkor">Subdit III (TIPIDKOR)</option>
@@ -172,6 +172,8 @@
             enableEdit: false,
             enableZoom: false,
             enableMove: false,
+            enableSearch: false,
+            color: "neutralgrey",
             idField: "id",
             parentIdField: "parent_id",
             primaryFields: ["jabatan", "nama"],
