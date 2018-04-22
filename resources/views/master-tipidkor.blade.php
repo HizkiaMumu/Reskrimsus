@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style-template.css" />
     <link href="/css/colors/default.css" rel="stylesheet" id="color-opt">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
     @yield('style')
 
 </head>
@@ -74,7 +75,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#strukturOrganisasi">STRUKTUR ORGANISASI</a>
+                            <a class="nav-link" href="/tipidkor/struktur-organisasi">STRUKTUR ORGANISASI</a>
                         </li>
 
                         <li class="nav-item">
@@ -138,6 +139,7 @@
           drift.load('47zbfx8khx2s');
         </script>
         <!-- End of Async Drift Code -->
+        <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
         @yield('script')
     </body>
 

@@ -89,7 +89,7 @@
 
   <!-- MODALS -->
     <div class="iziModal" id="modalUser">
-      <form class="form" action="" method="POST" id="formUser">
+      <form class="form" action="" method="POST" id="formUser" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-body">
           <div class="form-group">
