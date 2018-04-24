@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ZONA INTEGRITAS</a>
+                            <a class="nav-link" href="/tipidkor/zona-integritas">ZONA INTEGRITAS</a>
                         </li>
 
                         <li class="nav-item">

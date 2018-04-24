@@ -8,6 +8,7 @@ use App\Kategori;
 use App\Berita;
 use App\User;
 use App\Htck;
+use App\Zi;
 use Auth;
 
 class AdminPagesController extends Controller
@@ -62,6 +63,11 @@ class AdminPagesController extends Controller
       $data['struktur_organisasi'] = StrukturOrganisasi::with(['atasan'])->where('subdit', Auth::user()->subdit)->get();
       $data['no_struktur_organisasi'] = 1;
       return view('dashboard/struktur-organisasi', $data);
+    }
+
+    public function zi(){
+      $data['aprb'] = Zi::all();
+      return view('dashboard/zi', $data);
     }
 
 }

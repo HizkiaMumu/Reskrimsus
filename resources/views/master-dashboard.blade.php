@@ -197,6 +197,13 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </a>
         </li>
 
+        <li class="nav-item menu-navigasi" id="zi">
+          <a href="/admin/zi">
+            <i class="la la-map-o"></i>
+            <span class="menu-title">Zona Integritas</span>
+          </a>
+        </li>
+
       </ul>
 
     </div>

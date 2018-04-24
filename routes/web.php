@@ -4,7 +4,6 @@
 Route::get('/', 'PagesController@home');
 // Tipidkor Pages
 Route::get('/tipidkor', 'PagesController@tipidkor');
-Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
 Route::get('/tipidkor/htck', 'PagesController@htckTipidkor');
 Route::get('/tipidkor/struktur-organisasi', 'PagesController@strukturOrganisasiTipidkor');
 // Tipidkor NEWS Pages
@@ -12,6 +11,8 @@ Route::get('/tipidkor/news', 'TipidkorNewsController@home');
 Route::get('/tipidkor/news/all', 'TipidkorNewsController@allNews');
 Route::get('/tipidkor/news/{id}', 'TipidkorNewsController@readNews');
 Route::get('/tipidkor/news/kategori/{kategori}', 'TipidkorNewsController@categoryFilter');
+// Tipidkor Zona Integritas
+Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
 // -- End Pages
 
 // FILES --
@@ -67,7 +68,7 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/htck/lihat-htck/{filename}', 'HtckController@showHtck');
   Route::get('/admin/htck/hapus-htck/{id}', 'HtckController@deleteHtck');
   // END CRUD  HTCK
-  
+
   // CRUD STRUKTUR ORGANISASI
   Route::post('/admin/struktur-organisasi/tambah-struktur-organisasi', 'StrukturOrganisasiController@createStrukturOrganisasi');
   Route::get('/admin/struktur-organisasi/hapus-struktur-organisasi/{id}', 'StrukturOrganisasiController@deleteStrukturOrganisasi');
@@ -75,6 +76,14 @@ Route::group(['middleware' => 'auth'], function(){
   Route::post('/admin/struktur-organisasi/update-struktur-organisasi/{id}', 'StrukturOrganisasiController@updateStrukturOrganisasi');
   Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
   // END CRUD STRUKTUR ORGANISASI
+
+  // CRUD ZONA INTEGRITAS
+  Route::get('/admin/zi', 'AdminPagesController@zi');
+  Route::post('/admin/zi/aprb/tambah-aprb', 'ZiController@createAPRB');
+  Route::post('/admin/zi/aprb/edit-aprb/{id}', 'ZiController@editAPRB');
+  Route::get('/admin/zi/aprb/delete-aprb/{id}', 'ZiController@deleteAPRB');
+  Route::get('/admin/zi/aprb/detail-aprb/{id}', 'ZiController@detailAprb');
+  //
 
 });
 // -- End Dashboard
