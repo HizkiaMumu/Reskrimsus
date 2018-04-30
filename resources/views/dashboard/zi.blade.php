@@ -130,6 +130,82 @@
 
   </div>
 
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title" id="basic-layout-form">Tabel list Laporan WBS</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+              <li><a data-action="close"><i class="ft-x"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body">
+            <table class="table table-responsive" id="wbsTable" width="100%">
+              <thead>
+                <tr>
+                  <th width="5%">No</th>
+                  <th>Nama Pelapor</th>
+                  <th>Email Pelapor</th>
+                  <th>Nomor Telepon</th>
+                  <th>Judul Laporan</th>
+                  <th>Uraian Pengaduan</th>
+                  <th>Dugaan Korupsi</th>
+                  <th>Nama Pihak Yang Terlibat</th>
+                  <th>Jabatan</th>
+                  <th>Klasifikasi Jabatan</th>
+                  <th>Pihak Lain Yang Terlibat</th>
+                  <th>Lampiran File Pendukung</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $nomor = 1; ?>
+                @foreach($wbs as $item)
+                  <tr>
+                    <td>{{ $nomor++ }}</td>
+                    <td>{{ $item->nama_pelapor }}</td>
+                    <td>{{ $item->email_pelapor }}</td>
+                    <td>{{ $item->nomor_telepon }}</td>
+                    <td>{{ $item->judul_laporan }}</td>
+                    <td>{{ str_limit($item->uraian_pengaduan, 25) }}</td>
+                    <td>{{ $item->dugaan_korupsi }}</td>
+                    <td>{{ $item->nama_pihak_terlibat }}</td>
+                    <td>{{ $item->jabatan }}</td>
+                    <td>{{ $item->klasifikasi_jabatan }}</td>
+                    <td>{{ $item->pihak_lain_terlibat }}</td>
+                    <td>
+                      <a href="{{ $item->lampiran_file_pendukung }}">
+                        <button type="button" class="btn btn-outline-info round">
+                          <i class="la la-eye"></i> Lihat File
+                        </button>
+                      </a>
+                    </td>
+                    <td>
+                      <a href="/admin/zi/wbs/hapus-wbs/{{ $item->id }}">
+                        <button type="button" class="btn btn-outline-danger round">
+                          <i class="la la-trash-o"></i> Hapus Laporan
+                        </button>
+                      </a>
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 @endsection
 @section('script')
 
@@ -137,6 +213,9 @@
 
     $('.menu-navigasi').removeClass('active');
     $('#zonaIntegritas').addClass('active');
+
+    $("#wbsTable").DataTable();
+    $("#aprbTable").DataTable();
 
     var token = $('meta[name="_token"]').attr('content');
 

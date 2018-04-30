@@ -10,10 +10,6 @@ use Carbon\Carbon;
 class TipidkorNewsController extends Controller
 {
 
-    public function __construct(){
-      Carbon::setLocale('id');
-    }
-
     public function home(){
       $data['berita'] = Berita::orderBy("created_at", "desc")->get();
       $data['kategori'] = Kategori::all();

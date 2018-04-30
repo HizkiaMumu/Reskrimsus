@@ -210,7 +210,7 @@
                     data-y="['top','top','top','top']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <a href="#" class="theme-btn btn-style-one">Laporkan</a>
+                        <a href="#" class="theme-btn btn-style-one tombolWbs">Laporkan</a>
                     </div>
 
 
@@ -260,8 +260,25 @@
 </section>
 <!--End Main Slider-->
 
+<section class="audit-form-section">
+    <div class="auto-container">
+        <h3>WHISTLE BLOWER SYSTEM(WBS)</h3>
+        <div class="text">aplikasi yang disediakan oleh Dittipidkor bagi anda yang ingin melaporkan atau memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi pelanggaran yang terjadi di lingkungan Direktorat Tindak Pidana Korupsi Polda Kalimantan Timur</div>
+        <!--Audit Form-->
+        <div class="audit-form">
+          <div class="row clearfix">
+              <div class="column col-md-12 col-sm-12 col-xs-12">
+                  <div class="form-group text-left">
+                      <button type="button" class="theme-btn btn-style-one btn-block tombolWbs">LAPORKAN</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
 <!--Services Section-->
-<section class="services-section sky-bg">
+<section class="services-section sky-bg" id="aprb">
     <div class="auto-container">
         <!--Sec Title-->
         <div class="sec-title centered">
@@ -275,8 +292,8 @@
                     <div class="icon-box">
                         <span class="icon"><img src="{{ $item->icon }}" alt="" /></span>
                     </div>
-                    <h3><a href="/tipidkor/zi/{{ $item->id }}">{{ $item->title }}</a></h3>
-                    <a href="/tipidkor/zi/{{ $item->id }}" class="read-more">Pelajari Selengkapnya <i class="fa fa-angle-right"></i></a>
+                    <h3><a href="/tipidkor/zona-integritas/{{ $item->id }}">{{ $item->title }}</a></h3>
+                    <a href="/tipidkor/zona-integritas/{{ $item->id }}" class="read-more">Pelajari Selengkapnya <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
           @endforeach

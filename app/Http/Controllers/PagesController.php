@@ -22,6 +22,12 @@ class PagesController extends Controller
       return view('pages/tipidkor/zi/home', $data);
     }
 
+    public function detailAprb($id){
+      $data['aprb'] = Zi::all();
+      $data['aprbDetail'] = Zi::findOrFail($id);
+      return view('pages/tipidkor/zi/detail', $data);
+    }
+
     public function htckTipidkor(){
       $htck = Htck::where('pemilik', 'tipidkor')->orderBy("id", "DESC")->first();
       return redirect($htck->path);

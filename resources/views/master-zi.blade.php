@@ -12,6 +12,7 @@
 <link href="/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 <link href="/css/styleZi.css" rel="stylesheet">
 <link href="/css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.css" />
 
 
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
@@ -55,10 +56,11 @@
                             </div>
 
                             <div class="navbar-collapse collapse clearfix">
-                                  <ul class="navigation clearfix">
-                                      <li><a href="#">APRB</a></li>
-                                      <li><a href="#">WBS</a></li>
-                                  </ul>
+                              <ul class="navigation clearfix">
+                                <li><a href="/tipidkor/zona-integritas">HOME</a></li>
+                                <li><a href="#aprb">APRB</a></li>
+                                <li><a href="#" class="tombolWbs">WBS</a></li>
+                              </ul>
                             </div>
                         </nav>
                         <!-- Main Menu End-->
@@ -75,100 +77,12 @@
 
     <!--Main Footer-->
     <footer class="main-footer">
-    	<!--footer upper-->
-    	<div class="footer-upper" style="background-image:url(images/background/pattern.png)">
-        	<div class="auto-container">
-                <div class="row clearfix">
-                    <!--Big Column-->
-                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
-                        <div class="row clearfix">
-
-                            <!--Footer Column-->
-                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
-                                <div class="footer-widget logo-widget">
-                                    <div class="logo">
-                                        <a href="index.html"><img src="/images/logo-2.png" alt="" /></a>
-                                    </div>
-                                    <div class="text">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate</div>
-                                    <ul class="contact-info">
-                                        <li>sakai@gmail.com</li>
-                                        <li>+202-277-3894</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!--Footer Column-->
-                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
-                                <div class="footer-widget links-widget">
-									<h2>QUICK LINKS</h2>
-                                    <div class="widget-content">
-                                        <ul class="list">
-											<li><a href="#">How It Works</a></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Testimonial</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Big Column-->
-                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
-                        <div class="row clearfix">
-
-                            <!--Footer Column-->
-                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
-                            	<div class="footer-widget links-widget">
-									<h2>About</h2>
-                                    <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="#">How It Works</a></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Testimonial</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!--Footer Column-->
-                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
-                                <div class="footer-widget newsletter-widget">
-									<h2>SUBSCRIBE US</h2>
-                                    <div class="newsletter-form">
-                                        <form method="post" action="http://t.commonsupport.com/sakai/contact.html">
-                                            <div class="form-group">
-                                                <input type="email" name="email" value="" placeholder="Enter Your Email" required="">
-                                                <button type="submit" class="theme-btn btn-style-three">Send</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <ul class="social-icon-one">
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-vine"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Footer Bottom-->
-        <div class="footer-bottom">
-        	<div class="auto-container">
-            	<div class="copyright"> Copyright &copy; 2018 Sakai. All Rights Reserved.</div>
-            </div>
-        </div>
+      <!--Footer Bottom-->
+      <div class="footer-bottom">
+      	<div class="auto-container">
+          	<div class="copyright"> Copyright &copy; 2018 Rekayasa Production. All Rights Reserved.</div>
+          </div>
+      </div>
     </footer>
     <!--End Main Footer-->
 
@@ -177,6 +91,103 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+
+<!-- Modal APRB -->
+
+  <div id="modalAprb">
+
+    <div style="padding: 15px;">
+
+      <form action="/tipidkor/zona-integritas/wbs/tambah-wbs" method="POST" enctype="multipart/form-data">
+
+        {{ csrf_field() }}
+
+        <div class="form-group">
+          <label for="nama_pelapor"><b>Nama Pelapor</b></label>
+          <input type="text" name="nama_pelapor" class="form-control" id="nama_pelapor" placeholder="Masukan nama pelapor" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email_pelapor"><b>Email</b></label>
+          <input type="email" name="email_pelapor" class="form-control" id="email_pelapor" placeholder="Masukan email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nomor_telepon"><b>No.Telp</b></label>
+          <input type="number" name="nomor_telepon" class="form-control" id="nomor_telepon" placeholder="Masukan nomor telepon" required>
+        </div>
+
+        <div class="form-group">
+          <label for="judul_laporan"><b>Judul Laporan</b></label>
+          <input type="text" name="judul_laporan" class="form-control" id="judul_laporan" placeholder="Masukan judul laporan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="uraian_pengaduan"><b>Uraian Pengaduan</b></label>
+          <textarea name="uraian_pengaduan" class="form-control" id="uraian_pengaduan" placeholder="Silahkan tuliskan uraian" rows="8" cols="80" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="dugaan_korupsi"><b>Dugaan Korupsi yang ingin dilaporkan</b></label>
+          <select class="form-control" name="dugaan_korupsi" id="dugaan_korupsi" required>
+            <option disabled selected>Pilih kategori</option>
+            <option value="Pengadaan Barang dan Jasa">Pengadaan Barang dan Jasa</option>
+            <option value="Suap Menyuap">Suap Menyuap</option>
+            <option value="Pemerasan atau Pungli">Pemerasan atau Pungli</option>
+            <option value="Penggelapan Uang (Bendahara)">Penggelapan Uang (Bendahara)</option>
+            <option value="Gratifikasi">Gratifikasi</option>
+            <option value="BUMN/BUMD">BUMN/BUMD</option>
+            <option value="Penyalahgunaan APBN/APBD">Penyalahgunaan APBN/APBD</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nama_pihak_terlibat"><b>Nama Pihak yang terlibat</b></label>
+          <input type="text" name="nama_pihak_terlibat" class="form-control" id="nama_pihak_terlibat" placeholder="Masukan nama pihak yang terlibat" required>
+        </div>
+
+        <div class="form-group">
+          <label for="jabatan"><b>Jabatan</b></label>
+          <input type="text" name="jabatan" class="form-control" id="jabatan" placeholder="Masukan jabatan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="klasifikasi_jabatan"><b>Klasifikasi Jabatan</b></label>
+          <select class="form-control" name="klasifikasi_jabatan" id="klasifikasi_jabatan" required>
+            <option disabled selected>Pilih kategori</option>
+            <option value="Anggota DPR/DPRD/DPD">Anggota DPR/DPRD/DPD</option>
+            <option value="BUMN/BUMD">BUMN/BUMD</option>
+            <option value="Kepala Daerah">Kepala Daerah</option>
+            <option value="Pegawai Negeri Sipil">Pegawai Negeri Sipil</option>
+            <option value="Penegak Hukum">Penegak Hukum</option>
+            <option value="Penyelenggara Negara">Penyelenggara Negara</option>
+            <option value="Swasta">Swasta</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pihak_lain_terlibat"><b>Pihak Lain Yang Terlibat (optional)</b></label>
+          <input type="text" name="pihak_lain_terlibat" class="form-control" id="pihak_lain_terlibat" placeholder="Masukan pihak lain yang terlibat">
+        </div>
+
+        <div class="form-group">
+          <label for="lampiran_file_pendukung"><b>Lampiran (file data/dokumen pendukung)</b></label>
+          <input type="file" name="lampiran_file_pendukung" class="form-control" id="lampiran_file_pendukung" placeholder="Pilih file" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block"><b>SUBMIT</b></button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+<!-- END Modal APRB -->
 
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
@@ -200,6 +211,25 @@
 <script src="/js/bxslider.js"></script>
 <script src="/js/appear.js"></script>
 <script src="/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js"></script>
 @yield('script')
+<script>
+
+  $("#modalAprb").iziModal({
+    title: "Buat Laporan Pengaduan",
+    subtitle: "Silahkan lengkapi form dibawah ini.",
+    fullscreen: true,
+    headerColor: "#8A9DFC"
+  });
+
+  $(document).ready(function(){
+
+    $(".tombolWbs").on("click", function(){
+      $("#modalAprb").iziModal("open");
+    });
+
+  });
+
+</script>
 <!-- Mirrored from t.commonsupport.com/sakai/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Apr 2018 10:46:24 GMT -->
 </html>

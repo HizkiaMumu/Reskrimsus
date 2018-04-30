@@ -8,6 +8,7 @@ use App\Kategori;
 use App\Berita;
 use App\User;
 use App\Htck;
+use App\Wbs;
 use App\Zi;
 use Auth;
 
@@ -67,6 +68,7 @@ class AdminPagesController extends Controller
 
     public function zi(){
       $data['aprb'] = Zi::all();
+      $data['wbs'] = Wbs::orderBy("created_at", "DESC")->get();
       return view('dashboard/zi', $data);
     }
 

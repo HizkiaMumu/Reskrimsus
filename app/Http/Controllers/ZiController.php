@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Wbs;
 use App\Zi;
 
 class ZiController extends Controller
@@ -36,7 +37,7 @@ class ZiController extends Controller
 
       $aprb->content = $request->content;
       $aprb->save();
-      
+
       return redirect()->back()->with("OK", "Berhasil update data APRB");
     }
 
@@ -49,6 +50,26 @@ class ZiController extends Controller
     public function detailAprb($id){
       $aprb = Zi::findOrFail($id);
       return $aprb;
+    }
+
+    public function tambahWbs(Request $request){
+      $data = $request->all();
+      if($request->hasFile('lampiran_file_pendukung')){
+        $path = $request->file('lampiran_file_pendukung')->store('/public/lampiran_file_pendukung'); // with /public on path
+        $filename = $request->file('lampiran_file_pendukung')->hashName(); // remove the /public on path
+        $validPath = '/storage/lampiran_file_pendukung/' . $filename;
+        $data['lampiran_file_pendukung'] = $validPath;
+        $wbs = Wbs::create($data);
+        return redirect()->back()->with("OK", "Berhasil menambahkan laporan");
+      } else {
+        return redirect()->back()->with("ERR", "Silahkan masukan file pendukung");
+      }
+    }
+
+    public function hapusWbs($id){
+      $wbs = Wbs::findOrFail($id);
+      $wbs->delete();
+      return redirect()->back()->with("OK", "Berhasil menghapus laporan");
     }
 
 }
