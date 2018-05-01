@@ -90,7 +90,7 @@
                                         <td>{{ $item->nama }}</td>
                                         <td>{{ $item->atasan['nama'] }}</td>
                                         <td class="text-center">
-                                            <a class="btn btn-outline-danger" href="/admin/users/hapus-struktur-organisasi/{{ $item->id }}">
+                                            <a class="btn btn-outline-danger" href="/admin/struktur-organisasi/hapus-struktur-organisasi/{{ $item->id }}">
                                                 <i class="la la-trash"></i>
                                             </a>
                                             <a class="btn btn-outline-primary editStrukturOrganisasi">
