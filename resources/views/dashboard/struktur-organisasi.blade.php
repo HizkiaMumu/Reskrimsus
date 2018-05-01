@@ -164,6 +164,29 @@
 
 @section('script')
 
+    @if (Auth::user()->subdit == 'tipidkor')
+    <script>
+        $.ajax({
+            method: 'GET',
+            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
+        }).done(function (data) {
+            var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
+            theme: "cassandra",
+            enableEdit: false,
+            enableZoom: false,
+            enableMove: false,
+            enableSearch: false,
+            scale: 0.5,
+            color: "neutralgrey",
+            idField: "id",
+            parentIdField: "parent_id",
+            primaryFields: ["jabatan", "nama"],
+            photoFields: ["link_gambar"],
+            dataSource: data
+            });
+        });
+    </script>
+    @elseif (Auth::user()->subdit == 'ditreskrimsus')
     <script>
         $.ajax({
             method: 'GET',
@@ -183,6 +206,9 @@
             dataSource: data
             });
         });
+    </script>
+    @endif
+    <script>
         $('.iziModal').iziModal({
             fullscreen: true,
             title: 'Form Struktur Organisasi',
