@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-template.css" />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
     @yield('style')
 
 </head>
@@ -83,7 +84,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#strukturOrganisasi">STRUKTUR ORGANISASI</a>
+                            <a class="nav-link" href="/struktur-organisasi">STRUKTUR ORGANISASI</a>
                         </li>
 
                         <li class="nav-item">
@@ -122,6 +123,7 @@
         <script src="js/switcher.js"></script>
         <!-- Custom js -->
         <script src="js/app-template.js"></script>
+        <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
         @yield('script')
     </body>
 

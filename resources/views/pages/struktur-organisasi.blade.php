@@ -1,4 +1,4 @@
-@extends('master-tipidkor')
+@extends('master')
 @section('title', 'Struktur Organisasi | TIPIDKOR')
 @section('meta')
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -36,7 +36,7 @@
     <script>
         $.ajax({
             method: 'GET',
-            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
+            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi'
         }).done(function (data) {
             var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
             enableEdit: false,

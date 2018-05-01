@@ -50,7 +50,14 @@ class StrukturOrganisasiController extends Controller
         return redirect()->back()->with('OK', 'Berhasil mengupdate struktur organisasi');
     }
 
+
     public function getStrukturOrganisasi()
+    {
+        $data = StrukturOrganisasi::where('subdit', 'ditreskrimsus')->get();
+        return $data;
+    }
+
+    public function getStrukturOrganisasiTipidkor()
     {
         $data = StrukturOrganisasi::where('subdit', 'tipidkor')->get();
         return $data;
