@@ -122,7 +122,7 @@
                     <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukan nama..." required>
                 </div>
                 <div class="form-group">
-                    <label for="parent_id">Jabatan Atasan</label>
+                    <label for="parent_id">Nama Atasan</label>
                     <select name="parent_id" class="form-control" id="parent_id">
                         <option value="">-</option>
                         @foreach ($struktur_organisasi as $item)
@@ -144,10 +144,11 @@
                 <div class="form-group" style="display: none;">
                     <label for="subdit">Subdit</label>
                     <select name="subdit" class="form-control" id="subdit">
-                      <option value="indagsi">Subdit I (INDAGSI)</option>
-                      <option value="ppukdm">Subdit II (PPUKDM)</option>
-                      <option value="tipidkor">Subdit III (TIPIDKOR)</option>
-                      <option value="tipidter">Subdit IV (TIPIDTER)</option>
+                        <option value="ditreskrimsus">DITRESKRIMSUS</option>
+                        <option value="indagsi">Subdit I (INDAGSI)</option>
+                        <option value="ppukdm">Subdit II (PPUKDM)</option>
+                        <option value="tipidkor">Subdit III (TIPIDKOR)</option>
+                        <option value="tipidter">Subdit IV (TIPIDTER)</option>
                     </select>
                 </div>
             </div>
@@ -173,6 +174,7 @@
             enableZoom: false,
             enableMove: false,
             enableSearch: false,
+            scale: 0.5,
             color: "neutralgrey",
             idField: "id",
             parentIdField: "parent_id",

@@ -110,6 +110,7 @@
           <div class="form-group">
             <label for="subdit">Subdit</label>
             <select name="subdit" class="form-control" id="subdit" required>
+              <option value="ditreskrimsus">DITRESKRIMSUS</option>
               <option value="indagsi">Subdit I (INDAGSI)</option>
               <option value="ppukdm">Subdit II (PPUKDM)</option>
               <option value="tipidkor">Subdit III (TIPIDKOR)</option>

@@ -13,6 +13,11 @@ class PagesController extends Controller
       return view('pages/home');
     }
 
+    public function strukturOrganisasi()
+    {
+      return view('pages/struktur-organisasi');
+    }
+
     public function tipidkor(){
       return view('pages/tipidkor/home');
     }

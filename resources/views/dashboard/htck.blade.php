@@ -85,7 +85,7 @@
                       <a class="btn btn-outline-danger" href="/admin/htck/hapus-htck/{{ $item->id }}">
                         <i class="la la-trash"></i>
                       </a>
-                      <a class="btn btn-outline-info" href="/admin/htck/lihat-htck/{{ $item->filename }}">
+                      <a class="btn btn-outline-info" href="/storage/htck/{{ $item->filename }}">
                         <i class="la la-file-text"></i>
                       </a>
                     </td>

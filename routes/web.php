@@ -2,6 +2,8 @@
 
 // Pages --
 Route::get('/', 'PagesController@home');
+// Struktur Organisasi Reskrimsus Pages
+Route::get('/struktur-organisasi', 'PagesController@strukturOrganisasi');
 // Tipidkor Pages
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/htck', 'PagesController@htckTipidkor');
@@ -76,7 +78,6 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/struktur-organisasi/hapus-struktur-organisasi/{id}', 'StrukturOrganisasiController@deleteStrukturOrganisasi');
   Route::get('/admin/struktur-organisasi/edit-struktur-organisasi/{id}', 'StrukturOrganisasiController@editStrukturOrganisasi');
   Route::post('/admin/struktur-organisasi/update-struktur-organisasi/{id}', 'StrukturOrganisasiController@updateStrukturOrganisasi');
-  Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
   // END CRUD STRUKTUR ORGANISASI
 
   // CRUD ZONA INTEGRITAS
@@ -90,3 +91,8 @@ Route::group(['middleware' => 'auth'], function(){
 
 });
 // -- End Dashboard
+
+// AJAX
+Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
+Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor', 'StrukturOrganisasiController@getStrukturOrganisasiTipidkor');
+// -- END AJAX
