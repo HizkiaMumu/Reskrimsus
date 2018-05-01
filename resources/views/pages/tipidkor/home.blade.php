@@ -36,7 +36,7 @@
             <div class="features-title">
               <h5>TINDAK PIDANA KORUPSI <br> POLDA KALIMANTAN TIMUR</h5>
               <p class="mt-3 text-muted">
-                Subdit III Tipidkor adalah salah satu bagian/sub dari Ditreskrimsus yang bertugas melakukan penyelidikan dan penyidikan tindak pidana Perbankan yang terjadi di daerah hukum Polda.
+                Subdit III Tipidkor adalah salah satu bagian/sub dari Ditreskrimsus yang bertugas melakukan penyelidikan dan penyidikan tindak pidana korupsi yang terjadi di daerah hukum Polda.
                 <br><br>
                 Subdit III Tipidkor menyelenggarakan fungsi :
               </p>
