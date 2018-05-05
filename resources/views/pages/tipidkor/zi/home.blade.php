@@ -1,351 +1,182 @@
 @extends('master-zi')
-@section('title', 'HOME')
+@section('title', 'TIPIDKOR | ZONA INTEGRITAS')
 @section('content')
+<div class="preloader"><div class="status">&nbsp;</div></div>
 
-<!--Main Slider-->
-<section class="main-slider main-slider-one">
-    <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
-        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
-            <ul>
-                <!-- Slide 1 -->
-                <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="/images/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/main-slider/image-1.jpg">
-
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['260','180','140','120']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <h4>Welcome to</h4>
-                    </div>
-
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-fontsize="['64','40','36','24']"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['300','220','190','160']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                      <h2>ZONA INTEGRITAS <br>TIPIDKOR</h2>
-                    </div>
-
-                    <div class="tp-caption"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="normal"
-                    data-width="['670','470','600','400']"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['460','350','310','270']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                      <div class="text">Polda Kalimantan Timur</div>
-                    </div>
-
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['530','470','410','400']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                      <a href="#" class="theme-btn btn-style-one">Pelajari Lebih Lanjut</a>
-                    </div>
+<div id="mobilebgfix">
+	<div class="mobile-bg-fix-img-wrap">
+		<div class="mobile-bg-fix-img"></div>
+	</div>
+	<div class="mobile-bg-fix-whole-site">
 
 
-                    <div class="tp-caption tp-resizeme big-ipad-hidden"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['-150','15','15','15']"
-                    data-voffset="['50','0','0','0']"
-                    data-x="['left','left','left','left']"
-                    data-y="['bottom','bottom','bottom','bottom']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <figure class="content-image"><img src="/images/main-slider/content-image-2.png" alt=""></figure>
-                    </div>
+<header id="home" class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
 
-                    <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden"
-                    data-basealign="slide"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['0','0','0','0']"
-                    data-voffset="['0','0','0','0']"
-                    data-x="['left','left','left','left']"
-                    data-y="['bottom','bottom','bottom','bottom']"
-                    data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <figure class="content-image"><img src="/images/main-slider/content-image-1.png" alt=""></figure>
-                    </div>
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
 
-                </li>
+		<div class="container">
 
-                <!-- Slide 2 -->
-                <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="/images/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+<center><a href="#" ><img src="/wp-content/uploads/2017/07/Logo-DIREKTORAT-u6.png" alt="Zona Integritas"></a></center>
 
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/main-slider/image-1.jpg">
+			<!-- div class="navbar-header responsive-logo">
 
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['260','180','140','120']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <h4>Ingin Membuat Pengaduan?</h4>
-                    </div>
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-fontsize="['64','40','36','24']"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['300','220','190','160']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <h2>WHISTLE BLOWER <br>SYSTEM (WBS)</h2>
-                    </div>
+				<span class="sr-only">Toggle navigation</span>
 
-                    <div class="tp-caption"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="normal"
-                    data-width="['670','470','600','400']"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['460','350','310','270']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <div class="text">WBS adalah aplikasi bagi anda yang ingin melaporkan atau memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi pelanggaran.<br></div>
-                    </div>
+				<span class="icon-bar"></span>
 
-                    <div class="tp-caption tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['473','15','15','15']"
-                    data-voffset="['530','470','410','400']"
-                    data-x="['left','left','left','left']"
-                    data-y="['top','top','top','top']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <a href="#" class="theme-btn btn-style-one tombolWbs">Laporkan</a>
-                    </div>
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+				<a href="http://zi.tipidkorpolri.info/" class="navbar-brand"><img src="/http://zi.tipidkorpolri.info/wp-content/uploads/2017/07/LOGO-DIREKTORAT-TIPIDKOR-u1.png" alt="Zona Integritas"></a>
+			</div -->
+
+		<!--	 	<nav class="navbar-collapse bs-navbar-collapse collapse" id="site-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+		<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li class="page_item page-item-22"><a href="http://zi.tipidkorpolri.info/daftar-laporan-pengaduan/">Daftar Laporan Pengaduan</a></li>
+<li class="page_item page-item-872"><a href="http://zi.tipidkorpolri.info/kontak/">Kontak</a></li>
+<li class="page_item page-item-40"><a href="http://zi.tipidkorpolri.info/manajemen-perubahan/">Manajemen Perubahan</a></li>
+<li class="page_item page-item-54"><a href="http://zi.tipidkorpolri.info/mindset-dan-cultural-set-aparatur/">Mindset dan Cultural Set Aparatur</a></li>
+<li class="page_item page-item-21"><a href="http://zi.tipidkorpolri.info/open-ticket/">Open Ticket</a></li>
+<li class="page_item page-item-1480"><a href="http://zi.tipidkorpolri.info/paparan-pembangunan-zi/">Paparan Pembangunan ZI</a></li>
+<li class="page_item page-item-46"><a href="http://zi.tipidkorpolri.info/penataan-sistem-manajemen-sdm/">Penataan Sistem Manajemen SDM</a></li>
+<li class="page_item page-item-42"><a href="http://zi.tipidkorpolri.info/penataan-tatalaksana/">Penataan Tatalaksana</a></li>
+<li class="page_item page-item-50"><a href="http://zi.tipidkorpolri.info/penguatan-akuntabilitas/">Penguatan Akuntabilitas</a></li>
+<li class="page_item page-item-48"><a href="http://zi.tipidkorpolri.info/penguatan-pengawasan/">Penguatan Pengawasan</a></li>
+<li class="page_item page-item-52"><a href="http://zi.tipidkorpolri.info/peningkatan-kualitas-pelayanan-publik/">Peningkatan Kualitas Pelayanan Publik</a></li>
+<li class="page_item page-item-44"><a href="http://zi.tipidkorpolri.info/peraturan-perundang-undangan/">Peraturan Perundang-undangan</a></li>
+<li class="page_item page-item-70"><a href="http://zi.tipidkorpolri.info/upload-dokumen/">Upload Dokumen</a></li>
+<li class="page_item page-item-35"><a href="http://zi.tipidkorpolri.info/wbs/">WBS</a></li>
+<li class="page_item page-item-24"><a href="http://zi.tipidkorpolri.info/whistleblowers-system/">WhistleBlower&#8217;s System</a></li>
+</ul>	</nav>
+	    -->
+
+		</div>
+
+	</div>
+		<!-- / END TOP BAR --><div class="home-header-wrap">
+
+<ul id="parallax_move"><li class="layer layer1" data-depth="0.10" style="background-image: url(/wp-content/themes/zerif-lite/images/background1.jpg);"></li><li class="layer layer2" data-depth="0.20" style="background-image: url(/wp-content/uploads/2017/04/ZI-Home.png);"></li></ul><div class="header-content-wrap"><div class="container"><h1 class="intro-text">ZONA INTEGRITAS Dittipidkor Bareskrim POLRI</h1><div class="buttons"><a href="#focus" class="btn btn-primary custom-button red-btn">Program</a><a href="#aboutus" class="btn btn-primary custom-button green-btn">Dasar Hukum</a></div></div></div><!-- .header-content-wrap --><div class="clear"></div>
+</div>
+</header> <!-- / END HOME SECTION  -->
+<div id="content" class="site-content">
 
 
-                    <div class="tp-caption tp-resizeme big-ipad-hidden"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['-150','15','15','15']"
-                    data-voffset="['50','0','0','0']"
-                    data-x="['left','left','left','left']"
-                    data-y="['bottom','bottom','bottom','bottom']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <figure class="content-image"><img src="/images/main-slider/content-image-2.png" alt=""></figure>
-                    </div>
+<section class="focus" id="focus">
 
 
-                    <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden"
-                    data-basealign="slide"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['0','0','0','0']"
-                    data-voffset="['0','0','0','0']"
-                    data-x="['left','left','left','left']"
-                    data-y="['bottom','bottom','bottom','bottom']"
-                    data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                        <figure class="content-image"><img src="/images/main-slider/content-image-1.png" alt=""></figure>
-                    </div>
+	<div class="container">
 
-                </li>
-            </ul>
-        </div>
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+			<!-- SECTION TITLE AND SUBTITLE -->
+
+			<h2 class="dark-text">6 AREA PERUBAHAN REFORMASI BIROKRASI</h2>
+		</div>
+
+		<div class="row">
+
+				<span id="text-3" class="">			<div class="textwidget"><p><a href="{{ $paparan->file }}" target="_blank" rel="noopener"><img class="size-full wp-image-1489 aligncenter" src="/wp-content/uploads/2017/12/button_paparan-pembangunan-zi.jpg" alt="" width="342" height="44" /></a></p>
+<hr />
+</div>
+		</span>
+
+    @foreach($aprb as $item)
+      <span id="ctup-ads-widget-1" class="">
+	      <div class="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s">
+          <a href="/tipidkor/zona-integritas/{{ $item->id }}" class="service-icon">
+            <span class="sr-only">
+	            Go to {{ $item->title }}
+            </span>
+            <i class="pixeden" style="background:url({{ $item->icon }}) no-repeat center;width:100%; height:100%;"></i>
+					</a>
+          <h3 class="red-border-bottom">{{ $item->title }}</h3>
+		      <!-- FOCUS HEADING -->
+          <p>{{ $item->description }}</p>
+		    </div>
+			</span>
+    @endforeach
+
     </div>
-</section>
-<!--End Main Slider-->
 
-<section class="audit-form-section">
-    <div class="auto-container">
-        <h3>WHISTLE BLOWER SYSTEM(WBS)</h3>
-        <div class="text">aplikasi yang disediakan oleh Dittipidkor bagi anda yang ingin melaporkan atau memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi pelanggaran yang terjadi di lingkungan Direktorat Tindak Pidana Korupsi Polda Kalimantan Timur</div>
-        <!--Audit Form-->
-        <div class="audit-form">
-          <div class="row clearfix">
-              <div class="column col-md-12 col-sm-12 col-xs-12">
-                  <div class="form-group text-left">
-                      <button type="button" class="theme-btn btn-style-one btn-block tombolWbs">LAPORKAN</button>
-                  </div>
-              </div>
-          </div>
-        </div>
-    </div>
-</section>
+	</div> <!-- / END CONTAINER -->
 
-<!--Services Section-->
-<section class="services-section sky-bg" id="aprb">
-    <div class="auto-container">
-        <!--Sec Title-->
-        <div class="sec-title centered">
-            <h2>{{ count($aprb) }} AREA PERUBAHAN <span class="theme_color">REFORMASI BIROKRASI</span></h2>
-        </div>
-        <div class="row clearfix">
-          @foreach($aprb as $item)
-            <!--Services Block-->
-            <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-box wow fadeInLeft">
-                    <div class="icon-box">
-                        <span class="icon"><img src="{{ $item->icon }}" alt="" /></span>
-                    </div>
-                    <h3><a href="/tipidkor/zona-integritas/{{ $item->id }}">{{ $item->title }}</a></h3>
-                    <a href="/tipidkor/zona-integritas/{{ $item->id }}" class="read-more">Pelajari Selengkapnya <i class="fa fa-angle-right"></i></a>
-                </div>
-            </div>
-          @endforeach
-        </div>
-    </div>
-</section>
-<!--End Services Section-->
 
-<!-- Gallery Section -->
-<section class="gallery-section sky-bg">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <h2>DASAR <span class="theme_color">HUKUM</span></h2>
-        </div>
+</section>  <!-- / END FOCUS SECTION -->
 
-        <div class="row clearfix">
-            <!-- Gallery Item -->
-            <div class="gallery-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="inner-box">
-                    <figure class="image-box">
-                        <img src="/images/dasar-hukum-ZI-1.jpg" alt="">
-                        <!--Overlay Box-->
-                        <div class="overlay-box">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <a href="/images/dasar-hukum-ZI-1.jpg" class="link" data-fancybox="gallery" data-caption=""><span class="icon fa fa-search-plus"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </figure>
-                </div>
-            </div>
+<section class="about-us" id="aboutus">
 
-            <div class="gallery-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="inner-box">
-                    <figure class="image-box">
-                        <img src="/images/dasar-hukum-ZI-2.jpg" alt="">
-                        <!--Overlay Box-->
-                        <div class="overlay-box">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <a href="/images/dasar-hukum-ZI-2.jpg" class="link" data-fancybox="gallery" data-caption=""><span class="icon fa fa-search-plus"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </figure>
-                </div>
-            </div>
 
-        </div>
-    </div>
-</section>
-<!-- End Gallery secton -->
+	<div class="container">
 
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+			<h2 class="white-text">Dasar Hukum</h2>
+		</div><!-- / END SECTION HEADER -->
+
+		<!-- 3 COLUMNS OF ABOUT US-->
+
+		<div class="row">
+
+			<!-- COLUMN 1 - BIG MESSAGE ABOUT THE COMPANY-->
+
+		<div class="col-lg-12 col-md-12 column zerif_about_us_center " data-scrollreveal="enter bottom after 0s over 1s"><p><img class="aligncenter" src="/wp-content/uploads/2017/05/dasar-hukum-ZI-1.jpg" width="100%" height="100%" />
+<img class="aligncenter" src="/wp-content/uploads/2017/05/dasar-hukum-ZI-2.jpg" width="100%" height="100%" /></p></div>
+	</div> <!-- / END 3 COLUMNS OF ABOUT US-->
+
+	<!-- CLIENTS -->
+
+	</div> <!-- / END CONTAINER -->
+
+
+</section> <!-- END ABOUT US SECTION -->
+
+<section class="purchase-now" id="ribbon_right"><div class="container"><div class="row"><div class="col-md-9" data-scrollreveal="enter left after 0s over 1s"><h3 class="white-text">Ingin Membuat Pengaduan?</h3></div><div class="col-md-3" data-scrollreveal="enter right after 0s over 1s"><a href="/tipidkor/zona-integritas/wbs" class="btn btn-primary custom-button red-btn">WhistleBlower's System</a></div></div></div></section>
+</div><!-- .site-content -->
+
+
+<footer id="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+
+	<div class="container">
+
+
+		<div class="col-md-3 company-details"><div class="icon-top red-text"><img src="/wp-content/themes/zerif-lite/images/map25-redish.png" alt="" /></div><div class="zerif-footer-address">Gedung ORI Lt. 1 &amp; 2 Jl. HR Rasuna Said
+Kav C-19 Kuningan, Jakarta Selatan.</div></div><div class="col-md-3 company-details"><div class="icon-top green-text"><img src="/wp-content/themes/zerif-lite/images/envelope4-green.png" alt="" /></div><div class="zerif-footer-email"><a href="mailto:bagops.tpk@gmail.com">bagops.tpk@gmail.com</a></div></div><div class="col-md-3 company-details"><div class="icon-top blue-text"><img src="/wp-content/themes/zerif-lite/images/telephone65-blue.png" alt="" /></div><div class="zerif-footer-phone"><a href="tel:622122057190">+62-21-2205 7190</a></div></div><div class="col-md-3 copyright"><ul class="social"><li><a target="_blank" href="https://www.facebook.com/Tipidkor-Bareskrim-2096002183959907/"><span class="sr-only">Go to Facebook</span> <i class="fa fa-facebook"></i></a></li><li><a target="_blank" href="https://twitter.com/tipidkor"><span class="sr-only">Go to Twitter</span> <i class="fa fa-twitter"></i></a></li></ul><p id="zerif-copyright">Dit Tipidkor Bareskim</p></div>			</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+	</div><!-- mobile-bg-fix-whole-site -->
+</div><!-- .mobile-bg-fix-wrap -->
+
+
+<div style="display:none"><div class="cdm-modal" data-remodal-options="{ 'hashTracking': false }" data-remodal-id="file"> <a data-remodal-action="close" class="remodal-close"></a>
+			<div class="view-file-content">
+
+			</div>
+		</div></div>
+				<div style="display:none">
+<div class="remodal" data-remodal-id="cdm-utility">
+	<a data-remodal-action="close" class="remodal-close"></a>
+
+	<div class="cdm-utility-modal">
+	</div>
+</div>
+</div><div id="wpsp_front_popup" onclick="wpsp_close_front_popup();" style="display: none;"></div>
+<div id="wpsp_front_popup_inner" style="display: none;">
+    <div id="wpsp_front_popup_blank"></div>
+    <div id="wpsp_front_popup_body" style="display: none;"></div>
+</div>
+<img id="wpsp_front_popup_close_btn" alt="Close Button" onclick="wpsp_close_front_popup();" style="display: none;" src="/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/close_btn.png"/>
+<img id="wpsp_front_popup_loading_img" alt="Loading Image" style="display: none;" src="/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/ajax-loader%402x6a73.gif?ver=8.0.7"/><link rel='stylesheet' id='jquery-remodal-css'  href='/wp-content/plugins/sp-client-document-manager/css/jquery.remodal55fe.css?ver=4.9.5' type='text/css' media='all' />
 @endsection

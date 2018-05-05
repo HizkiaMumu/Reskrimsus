@@ -15,6 +15,8 @@ Route::get('/tipidkor/news/{id}', 'TipidkorNewsController@readNews');
 Route::get('/tipidkor/news/kategori/{kategori}', 'TipidkorNewsController@categoryFilter');
 // Tipidkor Zona Integritas
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
+Route::get('/tipidkor/zona-integritas/wbs', 'PagesController@detailWbs');
+Route::get('/tipidkor/zona-integritas/wbs/lapor', 'PagesController@laporWbs');
 Route::get('/tipidkor/zona-integritas/{id}', 'PagesController@detailAprb');
 Route::post('/tipidkor/zona-integritas/wbs/tambah-wbs', 'ZiController@tambahWbs');
 // -- End Pages
@@ -87,6 +89,7 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/zi/aprb/delete-aprb/{id}', 'ZiController@deleteAPRB');
   Route::get('/admin/zi/aprb/detail-aprb/{id}', 'ZiController@detailAprb');
   Route::get('/admin/zi/wbs/hapus-wbs/{id}', 'ZiController@hapusWbs');
+  Route::post('/admin/zi/paparan/tambah-paparan', 'ZiController@tambahPaparan');
   //
 
 });

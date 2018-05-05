@@ -27,6 +27,15 @@
 
   <div class="content-header-right col-md-6 col-12 mb-2 breadcrumb-new" style="text-align: right !important;">
     <button type="button" name="button" class="btn btn-outline-info round" id="tombolTambahAprb">Tambah APRB</button>
+    |
+    <button type="button" name="button" class="btn btn-outline-info round" id="tombolUploadPaparan">Upload Paparan ZI</button>
+    <form action="/admin/zi/paparan/tambah-paparan" method="POST" style="display: none; z-index: -1000;" enctype="multipart/form-data">
+
+      {{ csrf_field() }}
+      <input type="file" name="file" id="filePaparan">
+      <button type="submit" id="tombolTambahPaparan"></button>
+
+    </form>
   </div>
 
 @endsection
@@ -269,7 +278,15 @@
 
         });
 
-      })
+      });
+
+      $("#tombolUploadPaparan").on("click", function(){
+        $("#filePaparan").click();
+      });
+
+      $("#filePaparan").on("change", function(){
+        $("#tombolTambahPaparan").click();
+      });
 
     });
 

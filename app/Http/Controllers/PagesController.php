@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PaparanPembangunanZi;
 use App\Htck;
 use App\Zi;
 
@@ -24,6 +25,7 @@ class PagesController extends Controller
 
     public function zonaIntegritas(){
       $data['aprb'] = Zi::all();
+      $data['paparan'] = PaparanPembangunanZi::orderBy('id', 'desc')->first();
       return view('pages/tipidkor/zi/home', $data);
     }
 
@@ -31,6 +33,14 @@ class PagesController extends Controller
       $data['aprb'] = Zi::all();
       $data['aprbDetail'] = Zi::findOrFail($id);
       return view('pages/tipidkor/zi/detail', $data);
+    }
+
+    public function detailWbs(){
+      return view('pages/tipidkor/zi/detail-wbs');
+    }
+
+    public function laporWbs(){
+      return view('pages/tipidkor/zi/form-laporan-wbs');
     }
 
     public function htckTipidkor(){
