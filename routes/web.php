@@ -4,6 +4,12 @@
 Route::get('/', 'PagesController@home');
 // Struktur Organisasi Reskrimsus Pages
 Route::get('/struktur-organisasi', 'PagesController@strukturOrganisasi');
+// Bagbinops
+Route::get('/bagbinops', 'PagesController@bagbinops');
+// Bagwasidik
+Route::get('/bagwasidik', 'PagesController@bagwasidik');
+// Korwas ppns
+Route::get('/korwas-ppns', 'PagesController@korwasppns');
 // Tipidkor Pages
 Route::get('/tipidkor', 'PagesController@tipidkor');
 Route::get('/tipidkor/htck', 'PagesController@htckTipidkor');

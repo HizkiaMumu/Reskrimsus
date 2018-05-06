@@ -53,4 +53,19 @@ class PagesController extends Controller
       return view('pages/tipidkor/struktur-organisasi');
     }
 
+    public function bagbinops()
+    {
+      return view('pages/bagbinops/home');
+    }
+
+    public function bagwasidik()
+    {
+      return view('pages/bagwasidik/home');
+    }
+
+    public function korwasppns()
+    {
+      return view('pages/korwas-ppns/home');
+    }
+
 }
