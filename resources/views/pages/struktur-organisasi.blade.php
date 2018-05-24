@@ -8,6 +8,9 @@
         .get-oc-tb, .get-up{
             display: none;
         }
+        [data-field-name="link_gambar"]{
+            display: none;
+        }
     </style>
 @endsection
 @section('content')
@@ -34,9 +37,12 @@
 @endsection
 @section('script')
     <script>
+        $(".nav-item").removeClass("active");
+        $("a[href='/struktur-organisasi']").parent().addClass("active");
+    
         $.ajax({
             method: 'GET',
-            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi'
+            url: '/struktur-organisasi/ajax/get-struktur-organisasi'
         }).done(function (data) {
             var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
             enableEdit: false,

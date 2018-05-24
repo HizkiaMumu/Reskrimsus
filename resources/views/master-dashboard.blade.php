@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.css" />
-  <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
+  <link rel="stylesheet" href="/css/getorgchart.css">
   @yield('style')
   <!-- END Custom CSS-->
 </head>
@@ -87,46 +87,6 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout"><i class="ft-power"></i> Logout</a>
               </div>
-            </li>
-            <li class="dropdown dropdown-notification nav-item">
-              <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
-                <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
-                <li class="dropdown-menu-header">
-                  <h6 class="dropdown-header m-0">
-                    <span class="grey darken-2">Notifications</span>
-                  </h6>
-                  <span class="notification-tag badge badge-default badge-danger float-right m-0">2 New</span>
-                </li>
-                <li class="scrollable-container media-list w-100">
-                  <a href="javascript:void(0)">
-                    <div class="media">
-                      <div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan"></i></div>
-                      <div class="media-body">
-                        <h6 class="media-heading">You have new order!</h6>
-                        <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                        <small>
-                          <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time>
-                        </small>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="javascript:void(0)">
-                    <div class="media">
-                      <div class="media-left align-self-center"><i class="ft-download-cloud icon-bg-circle bg-red bg-darken-1"></i></div>
-                      <div class="media-body">
-                        <h6 class="media-heading red darken-1">99% Server load</h6>
-                        <p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu risus.</p>
-                        <small>
-                          <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Five hour ago</time>
-                        </small>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -197,12 +157,14 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </a>
         </li>
 
-        <li class="nav-item menu-navigasi" id="zi">
-          <a href="/admin/zi">
-            <i class="la la-map-o"></i>
-            <span class="menu-title">Zona Integritas</span>
-          </a>
-        </li>
+        @if(Auth::user()->level == 3)
+            <li class="nav-item menu-navigasi" id="zi">
+              <a href="/admin/zi">
+                <i class="la la-map-o"></i>
+                <span class="menu-title">Zona Integritas</span>
+              </a>
+            </li>
+        @endif
 
       </ul>
 
@@ -223,8 +185,8 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <footer class="footer footer-static footer-light navbar-border navbar-shadow">
     <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
-      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent"
-        target="_blank">PIXINVENT </a>, All rights reserved. </span>
+      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="http://rekayasaproduction.rplsmkn2-bpn.com"
+        target="_blank">Rekayasa Production </a>, All rights reserved. </span>
       <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
     </p>
   </footer>
@@ -252,7 +214,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.0.0/viewer.min.js"></script>
-  <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
+  <script src="/js/getorgchart.js"></script>
   @yield('script')
   <!-- END PAGE LEVEL JS-->
 

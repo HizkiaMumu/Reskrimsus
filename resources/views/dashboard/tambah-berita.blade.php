@@ -45,7 +45,7 @@
                   <label for="thumbnail"><b>Thumbnail</b></label>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile01 thumbnail" name="thumbnail" accept="image/*">
-                    <label class="custom-file-label" for="inputGroupFile01">Pilih gambar...</label>
+                    <label class="custom-file-label" for="inputGroupFile01">Pilih gambar... (Ukuran direkomendasikan 848 x 560 pixel)</label>
                   </div>
                 </div>
                 <div class="form-group">

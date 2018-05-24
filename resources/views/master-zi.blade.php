@@ -1,235 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Mirrored from t.commonsupport.com/sakai/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Apr 2018 10:41:48 GMT -->
+<html lang="en-US">
+
+
+<!-- Mirrored from zi.tipidkorpolri.info/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Apr 2018 05:34:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<meta charset="utf-8">
-<title>@yield('title') | Zona Integritas</title>
-<!-- Stylesheets -->
-<link href="/css/bootstrap.css" rel="stylesheet">
-<link href="/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
-<link href="/css/styleZi.css" rel="stylesheet">
-<link href="/css/responsive.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="xmlrpc.php">
+
+<title>@yield('title')</title>
+<link rel='dns-prefetch' href='/http://ajax.googleapis.com/' />
+<link rel='dns-prefetch' href='/http://maxcdn.bootstrapcdn.com/' />
+<link rel='dns-prefetch' href='/http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='/http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Zona Integritas &raquo; Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/zi.tipidkorpolri.info\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataurl(/);l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataurl(/);return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min55fe.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-my-login-css'  href='/wp-content/plugins/theme-my-login/theme-my-login9d94.css?ver=6.4.10' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css'  href='/ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min55fe.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-smarty-css'  href='/maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min55fe.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='cdm-style-css'  href='/wp-content/plugins/sp-client-document-manager/style292d.css?ver=2.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cdm_reverse_order-css'  href='/wp-content/plugins/sp-client-document-manager/css/breadcrumbs55fe.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font-css'  href='/http://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A400%2C700%7CHomemade+Apple&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='/http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600italic%2C600%2C700%2C700italic%2C800%2C800italic&amp;ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='/wp-content/themes/zerif-lite/css/bootstrap55fe.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='/wp-content/themes/zerif-lite/css/font-awesome.mind3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='/wp-content/themes/zerif-lite/styled3b3.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='/wp-content/themes/zerif-lite/css/responsived3b3.css?ver=v1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='zerif_ie_style-css'  href='/http://zi.tipidkorpolri.info/wp-content/themes/zerif-lite/css/ie.css?ver=v1' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/jquery.remodal55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/jquery.responsive.tabs55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/mouse.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/resizable.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/draggable.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/button.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/dialog.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='/wp-includes/js/mediaelement/mediaelement-and-player.min45a0.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='/wp-includes/js/mediaelement/mediaelement-migrate.min55fe.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/jquery.validate55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/jquery.cookie55fe.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sp_vars = {"ajax_url":"http:\/\/zi.tipidkorpolri.info\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/zi.tipidkorpolri.info\/wp-content\/plugins\/sp-client-document-manager\/","uid":"0","sp_cu_user_projects_required":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/upload55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/jquery.modal.responsive55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/js/reverse55fe.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sp_cdm_link = {"ajax":"http:\/\/zi.tipidkorpolri.info\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/integrated/sp-cdm-link/js/scripts55fe.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sp_cdm_media = {"ajax":"http:\/\/zi.tipidkorpolri.info\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/sp-client-document-manager/integrated/sp-cdm-media/js/scripts55fe.js?ver=4.9.5'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='/http://zi.tipidkorpolri.info/wp-content/themes/zerif-lite/js/html5.js?ver=4.9.5'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='/wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.9.5" />
+<link rel='stylesheet' id='thickbox-css'  href='/wp-includes/js/thickbox/thickbox55fe.css?ver=4.9.5' type='text/css' media='all' />
+<style type='text/css'>.label.label-info {
+    background-color: #2a65f2 !important;
+}</style>			<script type="text/javascript">
+                            var front_custom_filters=',#cust4_front';
+                            var front_custom_field_keys="4";
+			</script>
+				<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+.purchase-now {
+	background: #743c35;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.about-us {
+background: url(/wp-content/uploads/2017/05/bg-zi.jpg);
 
 
-<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
-<link rel="icon" href="/images/favicon.png" type="image/x-icon">
-@yield('style')
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="/js/respond.js"></script><![endif]-->
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+color: #FFF;
+}		</style>
+
 </head>
 
-<body>
 
-<div class="page-wrapper">
-    <!-- Preloader -->
-    <div class="preloader"></div>
+<body class="home blog" >
 
-    <!-- Main Header-->
-    <header class="main-header">
-
-        <!-- Main Box -->
-    	<div class="main-box">
-        	<div class="auto-container">
-            	<div class="outer-container clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="/logo-polda/logo2.png" alt="" style="height: 40px; width: auto;"></a></div>
-                    </div>
-                    <!--Nav Outer-->
-                    <div class="nav-outer clearfix">
-                        <!-- Main Menu -->
-                        <nav class="main-menu">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-
-                            <div class="navbar-collapse collapse clearfix">
-                              <ul class="navigation clearfix">
-                                <li><a href="/tipidkor/zona-integritas">HOME</a></li>
-                                <li><a href="#aprb">APRB</a></li>
-                                <li><a href="#" class="tombolWbs">WBS</a></li>
-                              </ul>
-                            </div>
-                        </nav>
-                        <!-- Main Menu End-->
-
-                    </div>
-                    <!--Nav Outer End-->
-            	</div>
-            </div>
-        </div>
-    </header>
-    <!--End Main Header -->
-
-    @yield('content')
-
-    <!--Main Footer-->
-    <footer class="main-footer">
-      <!--Footer Bottom-->
-      <div class="footer-bottom">
-      	<div class="auto-container">
-          	<div class="copyright"> Copyright &copy; 2018 Rekayasa Production. All Rights Reserved.</div>
-          </div>
-      </div>
-    </footer>
-    <!--End Main Footer-->
-
-</div>
-<!--End pagewrapper-->
-
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
-
-<!-- Modal APRB -->
-
-  <div id="modalAprb">
-
-    <div style="padding: 15px;">
-
-      <form action="/tipidkor/zona-integritas/wbs/tambah-wbs" method="POST" enctype="multipart/form-data">
-
-        {{ csrf_field() }}
-
-        <div class="form-group">
-          <label for="nama_pelapor"><b>Nama Pelapor</b></label>
-          <input type="text" name="nama_pelapor" class="form-control" id="nama_pelapor" placeholder="Masukan nama pelapor" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email_pelapor"><b>Email</b></label>
-          <input type="email" name="email_pelapor" class="form-control" id="email_pelapor" placeholder="Masukan email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="nomor_telepon"><b>No.Telp</b></label>
-          <input type="number" name="nomor_telepon" class="form-control" id="nomor_telepon" placeholder="Masukan nomor telepon" required>
-        </div>
-
-        <div class="form-group">
-          <label for="judul_laporan"><b>Judul Laporan</b></label>
-          <input type="text" name="judul_laporan" class="form-control" id="judul_laporan" placeholder="Masukan judul laporan" required>
-        </div>
-
-        <div class="form-group">
-          <label for="uraian_pengaduan"><b>Uraian Pengaduan</b></label>
-          <textarea name="uraian_pengaduan" class="form-control" id="uraian_pengaduan" placeholder="Silahkan tuliskan uraian" rows="8" cols="80" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="dugaan_korupsi"><b>Dugaan Korupsi yang ingin dilaporkan</b></label>
-          <select class="form-control" name="dugaan_korupsi" id="dugaan_korupsi" required>
-            <option disabled selected>Pilih kategori</option>
-            <option value="Pengadaan Barang dan Jasa">Pengadaan Barang dan Jasa</option>
-            <option value="Suap Menyuap">Suap Menyuap</option>
-            <option value="Pemerasan atau Pungli">Pemerasan atau Pungli</option>
-            <option value="Penggelapan Uang (Bendahara)">Penggelapan Uang (Bendahara)</option>
-            <option value="Gratifikasi">Gratifikasi</option>
-            <option value="BUMN/BUMD">BUMN/BUMD</option>
-            <option value="Penyalahgunaan APBN/APBD">Penyalahgunaan APBN/APBD</option>
-            <option value="Lainnya">Lainnya</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="nama_pihak_terlibat"><b>Nama Pihak yang terlibat</b></label>
-          <input type="text" name="nama_pihak_terlibat" class="form-control" id="nama_pihak_terlibat" placeholder="Masukan nama pihak yang terlibat" required>
-        </div>
-
-        <div class="form-group">
-          <label for="jabatan"><b>Jabatan</b></label>
-          <input type="text" name="jabatan" class="form-control" id="jabatan" placeholder="Masukan jabatan" required>
-        </div>
-
-        <div class="form-group">
-          <label for="klasifikasi_jabatan"><b>Klasifikasi Jabatan</b></label>
-          <select class="form-control" name="klasifikasi_jabatan" id="klasifikasi_jabatan" required>
-            <option disabled selected>Pilih kategori</option>
-            <option value="Anggota DPR/DPRD/DPD">Anggota DPR/DPRD/DPD</option>
-            <option value="BUMN/BUMD">BUMN/BUMD</option>
-            <option value="Kepala Daerah">Kepala Daerah</option>
-            <option value="Pegawai Negeri Sipil">Pegawai Negeri Sipil</option>
-            <option value="Penegak Hukum">Penegak Hukum</option>
-            <option value="Penyelenggara Negara">Penyelenggara Negara</option>
-            <option value="Swasta">Swasta</option>
-            <option value="Lainnya">Lainnya</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="pihak_lain_terlibat"><b>Pihak Lain Yang Terlibat (optional)</b></label>
-          <input type="text" name="pihak_lain_terlibat" class="form-control" id="pihak_lain_terlibat" placeholder="Masukan pihak lain yang terlibat">
-        </div>
-
-        <div class="form-group">
-          <label for="lampiran_file_pendukung"><b>Lampiran (file data/dokumen pendukung)</b></label>
-          <input type="file" name="lampiran_file_pendukung" class="form-control" id="lampiran_file_pendukung" placeholder="Pilih file" required>
-        </div>
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block"><b>SUBMIT</b></button>
-        </div>
-
-      </form>
-
-    </div>
-
-  </div>
-
-<!-- END Modal APRB -->
-
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<!--Revolution Slider-->
-<script src="/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="/js/main-slider-script.js"></script>
-<!--End Revolution Slider-->
-<script src="/js/jquery.fancybox.js"></script>
-<script src="/js/owl.js"></script>
-<script src="/js/wow.js"></script>
-<script src="/js/bxslider.js"></script>
-<script src="/js/appear.js"></script>
-<script src="/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js"></script>
-@yield('script')
-<script>
-
-  $("#modalAprb").iziModal({
-    title: "Buat Laporan Pengaduan",
-    subtitle: "Silahkan lengkapi form dibawah ini.",
-    fullscreen: true,
-    headerColor: "#8A9DFC"
-  });
-
-  $(document).ready(function(){
-
-    $(".tombolWbs").on("click", function(){
-      $("#modalAprb").iziModal("open");
-    });
-
-  });
-
+<link rel='stylesheet' id='jquery-responsive-tabs-css'  href='/wp-content/plugins/sp-client-document-manager/css/jquery.responsive.tabs55fe.css?ver=4.9.5' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/tabs.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/datepicker.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
 </script>
-<!-- Mirrored from t.commonsupport.com/sakai/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Apr 2018 10:46:24 GMT -->
+<script type='text/javascript' src='/wp-includes/js/mediaelement/wp-mediaelement.min55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.form.min50fa.js?ver=4.2.1'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/bootstrap.min11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/jquery.knob11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/smoothscroll11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/scrollReveal11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/zerif11a8.js?ver=20120206'></script>
+<script type='text/javascript' src='/wp-content/themes/zerif-lite/js/parallaxd3b3.js?ver=v1'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min55fe.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/zi.tipidkorpolri.info\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-includes/js/thickbox/thickboxab87.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='/wp-includes/js/underscore.min4511.js?ver=1.8.3'></script>
+<script type='text/javascript' src='/wp-includes/js/shortcode.min55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='http://zi.tipidkorpolri.info/wp-admin/js/media-upload.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/effect.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/effect-pulsate.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/ui/effect-highlight.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"0","time":"1523079278","secure":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-includes/js/utils.min55fe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='http://zi.tipidkorpolri.info/wp-admin/js/editor.min.js?ver=4.9.5'></script>
+
+<!-- Shortcodes Ultimate custom CSS - start -->
+<style type="text/css">
+
+
+  .su-spoiler.my-custom-spoiler {}
+  .su-spoiler.my-custom-spoiler .su-spoiler-title { background-color: #84ADEA }
+  .su-spoiler.my-custom-spoiler .su-spoiler-title .su-spoiler-icon,
+  .su-spoiler.su-spoiler-closed.my-custom-spoiler .su-spoiler-title .su-spoiler-icon {
+    left: 3px;
+    background-color: #fff;
+  }
+  .su-spoiler.my-custom-spoiler .su-spoiler-content { background-color: #C0D1EB }
+
+</style>
+<!-- Shortcodes Ultimate custom CSS - end -->
+
+@yield('content')
+<footer id="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+
+	<div class="container">
+
+
+		<div class="col-md-3 company-details"><div class="icon-top red-text"><img src="/wp-content/themes/zerif-lite/images/map25-redish.png" alt="" /></div><div class="zerif-footer-address">Jalan Syarifuddin Yoes No.99, Sepinggan, Balikpapan Selatan, Gn. Bahagia, Balikpapan Sel., Kota Balikpapan, Kalimantan Timur 76115</div></div><div class="col-md-3 company-details"><div class="icon-top green-text"><img src="/wp-content/themes/zerif-lite/images/envelope4-green.png" alt="" /></div><div class="zerif-footer-email"><a href="mailto:bagops_tipidkor@reskrimsuskaltim.com">bagops_tipidkor@reskrimsuskaltim.com</a></div></div><div class="col-md-3 company-details"><div class="icon-top blue-text"><img src="/wp-content/themes/zerif-lite/images/telephone65-blue.png" alt="" /></div><div class="zerif-footer-phone"><a href="tel:622122057190">+62-21-2205 7190</a></div></div><div class="col-md-3 copyright"><ul class="social"><li><a target="_blank" href="https://www.facebook.com/Tipidkor-Bareskrim-2096002183959907/"><span class="sr-only">Go to Facebook</span> <i class="fa fa-facebook"></i></a></li><li><a target="_blank" href="https://twitter.com/tipidkor"><span class="sr-only">Go to Twitter</span> <i class="fa fa-twitter"></i></a></li></ul><p id="zerif-copyright">Subdit Tipidkor Polda Kaltim</p></div>			</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+	</div><!-- mobile-bg-fix-whole-site -->
+</div><!-- .mobile-bg-fix-wrap -->
+
+
+<div style="display:none"><div class="cdm-modal" data-remodal-options="{ 'hashTracking': false }" data-remodal-id="file"> <a data-remodal-action="close" class="remodal-close"></a>
+			<div class="view-file-content">
+
+			</div>
+		</div></div>
+				<div style="display:none">
+<div class="remodal" data-remodal-id="cdm-utility">
+	<a data-remodal-action="close" class="remodal-close"></a>
+
+	<div class="cdm-utility-modal">
+	</div>
+</div>
+</div><div id="wpsp_front_popup" onclick="wpsp_close_front_popup();" style="display: none;"></div>
+<div id="wpsp_front_popup_inner" style="display: none;">
+    <div id="wpsp_front_popup_blank"></div>
+    <div id="wpsp_front_popup_body" style="display: none;"></div>
+</div>
+<img id="wpsp_front_popup_close_btn" alt="Close Button" onclick="wpsp_close_front_popup();" style="display: none;" src="/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/close_btn.png"/>
+<img id="wpsp_front_popup_loading_img" alt="Loading Image" style="display: none;" src="/wp-content/plugins/wp-support-plus-responsive-ticket-system/asset/images/ajax-loader%402x6a73.gif?ver=8.0.7"/><link rel='stylesheet' id='jquery-remodal-css'  href='/wp-content/plugins/sp-client-document-manager/css/jquery.remodal55fe.css?ver=4.9.5' type='text/css' media='all' />
+
+</body>
+
+
+<!-- Mirrored from zi.tipidkorpolri.info/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Apr 2018 05:35:43 GMT -->
 </html>

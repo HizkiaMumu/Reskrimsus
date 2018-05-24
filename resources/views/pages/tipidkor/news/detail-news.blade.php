@@ -74,10 +74,10 @@
                 <div class="row">
                   @foreach($artikel_terkait as $item)
                     <div class="col-sm-4">
-                    <div class="post medium-post">
+                        <div class="post medium-post">
                       <div class="entry-header">
                         <div class="entry-thumbnail">
-                          <img class="img-responsive" src="{{ $item->thumbnail }}" alt="{{ $item->title }}">
+                          <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 177px !important;" alt="{{ $item->title }}">
                         </div>
                       </div>
                       <div class="post-content">
@@ -93,7 +93,11 @@
                         </h2>
                       </div>
                     </div><!--/post-->
-                  </div>
+                    </div>
+                    @php $numberOfColumns++ @endphp
+                    @if ($numberOfColumns % 3 == 0)
+                        <div class="row"></div>
+                    @endif
                   @endforeach
                 </div>
               </div><!--/.section -->

@@ -15,10 +15,12 @@ class StrukturOrganisasiController extends Controller
     {
         $data = $request->all();
         if ($request->hasFile('link_gambar')) {
-            $path = $request->file('link_gambar')->store('public/link_gambar/'); // with /public on path
+            $path = $request->file('link_gambar')->store('/public/link_gambar/'); // with /public on path
             $filename = $request->file('link_gambar')->hashName(); // remove the /public on path
             $validPath = '/storage/link_gambar/' . $filename;
             $data['link_gambar'] = $validPath;
+        }else {
+            $data['link_gambar'] = '/storage/link_gambar/qM2TMoh6FJKtLUu6tLQa3HAxRcLKyBCx3HP646oq.png';
         }
         $kirim = StrukturOrganisasi::create($data);
         return redirect()->back()->with('OK', 'Berhasil menambahkan struktur organisasi');
@@ -40,7 +42,7 @@ class StrukturOrganisasiController extends Controller
     {
         $data = $request->all();
         if ($request->hasFile('link_gambar')) {
-            $path = $request->file('link_gambar')->store('public/link_gambar/'); // with /public on path
+            $path = $request->file('link_gambar')->store('/public/link_gambar/'); // with /public on path
             $filename = $request->file('link_gambar')->hashName(); // remove the /public on path
             $validPath = '/storage/link_gambar/' . $filename;
             $data['link_gambar'] = $validPath;

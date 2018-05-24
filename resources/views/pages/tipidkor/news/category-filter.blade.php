@@ -15,7 +15,7 @@
               <div class="post feature-post">
                 <div class="entry-header">
                   <div class="entry-thumbnail">
-                    <img class="img-responsive" src="{{ $item->thumbnail }}" alt="" />
+                    <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 177px !important" alt="" />
                   </div>
                   <div class="catagory technology"><span><a href="#">{{ $item->kategori->kategori }}</a></span></div>
                 </div>
@@ -33,15 +33,19 @@
                 </div>
               </div><!--/post-->
             </div>
+            @php $numberOfColumns++ @endphp
+            @if ($numberOfColumns % 3 == 0)
+                <div class="row"></div>
+            @endif
           @endforeach
         </div>
       </div><!--/#content-->
     </div>
   </div><!--/.section-->
 
-  <div class="section add inner-add">
-    <a href="#"><img class="img-responsive" src="/news/images/post/add/add2.jpg" alt="" /></a>
-  </div><!--/.section-->
+  <!--<div class="section add inner-add">-->
+  <!--  <a href="#"><img class="img-responsive" src="/news/images/post/add/add2.jpg" alt="" /></a>-->
+  <!--</div><!--/.section-->
 
 </div><!--/.container-->
 

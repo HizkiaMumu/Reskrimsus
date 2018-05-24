@@ -19,7 +19,7 @@
       <div class="card" style="">
         <div class="card-content">
           <div class="embed-responsive embed-responsive-item embed-responsive-16by9">
-            <iframe class="img-thumbnail" src="https://www.youtube.com/embed/SsE5U7ta9Lw?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen=""></iframe>
+            <iframe class="img-thumbnail" src="https://www.youtube.com/embed/RulaXLbNgWM?rel=0&amp;controls=1&amp;showinfo=0" allowfullscreen="true"></iframe>
           </div>
         </div>
       </div>

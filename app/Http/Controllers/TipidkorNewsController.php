@@ -11,6 +11,7 @@ class TipidkorNewsController extends Controller
 {
 
     public function home(){
+      $data['numberOfColumns'] = 0;
       $data['berita'] = Berita::orderBy("created_at", "desc")->get();
       $data['kategori'] = Kategori::all();
       $data['berita_baru'] = Berita::take(7)->orderBy("created_at", "desc")->get();
@@ -18,18 +19,21 @@ class TipidkorNewsController extends Controller
     }
 
     public function allNews(){
+      $data['numberOfColumns'] = 0;
       $data['berita'] = Berita::orderBy("created_at", "desc")->get();
       $data['kategori'] = Kategori::all();
       return view('pages/tipidkor/news/all-news', $data);
     }
 
     public function categoryFilter($kategori){
+      $data['numberOfColumns'] = 0;
       $data['kategori_terpilih'] = Kategori::where('kategori', $kategori)->first();
       $data['kategori'] = Kategori::all();
       return view('pages/tipidkor/news/category-filter', $data);
     }
 
     public function readNews($id){
+      $data['numberOfColumns'] = 0;
       $data['berita'] = Berita::findOrFail($id);
       $data['kategori'] = Kategori::all();
       $data['artikel_terkait'] = Berita::take(6)->where('kategori_id', $data['berita']->kategori_id)->orderBy("created_at", "desc")->get();

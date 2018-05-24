@@ -8,6 +8,9 @@
         .get-oc-tb, .get-up{
             display: none;
         }
+        [data-field-name="link_gambar"]{
+            display: none;
+        }
     </style>
 @endsection
 @section('content')
@@ -30,19 +33,24 @@
             </div>
         </div>
     </section>
-    <div id="strukturOrganisasiChart"></div>
+    <div id="strukturOrganisasiChart" style="height: 1400px"></div>
 @endsection
 @section('script')
     <script>
+        
+        $(".menuPilihan").removeClass("active");
+        $("#strukturOrganisasi").addClass("active");
+        
         $.ajax({
             method: 'GET',
-            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
+            url: '/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
         }).done(function (data) {
             var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
             enableEdit: false,
+            enableSearch: false,
             enableZoom: false,
             enableMove: false,
-            enableSearch: false,
+            expandToLevel: 8,
             scale: 0.5,
             color: "neutralgrey",
             idField: "id",

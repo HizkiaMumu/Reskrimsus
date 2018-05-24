@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-
-<!-- Mirrored from themesdesign.in/brizzle/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Apr 2018 07:46:20 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style-template.css" />
     <link href="/css/colors/default.css" rel="stylesheet" id="color-opt">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
+    <link rel="stylesheet" href="/css/getorgchart.css">
     @yield('style')
 
 </head>
@@ -51,8 +48,8 @@
                     <img src="images/logo-light.png" alt="" class="img-fluid logo-light" >
                 </a> -->
 
-                <a class="navbar-brand" href="#">
-                  <img src="/images/logo_polda.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
+                <a class="navbar-brand" href="/tipidkor">
+                  <img src="/logo-polda/logo2.png" style="height: 1.5em; width: auto; margin-top: -0.3em;">
                   TIPIDKOR
                 </a>
 
@@ -62,27 +59,27 @@
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">HOME</a>
+                        <li class="nav-item active menuPilihan">
+                            <a href="/tipidkor" class="nav-link" href="#home">HOME</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav- menuPilihan">
                             <a class="nav-link" href="/tipidkor/news">NEWS</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item menuPilihan">
                             <a class="nav-link" href="/tipidkor/htck">HTCK</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item menuPilihan" id="strukturOrganisasi">
                             <a class="nav-link" href="/tipidkor/struktur-organisasi">STRUKTUR ORGANISASI</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item menuPilihan">
                             <a class="nav-link" href="/tipidkor/zona-integritas">ZONA INTEGRITAS</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item menuPilihan">
                             <a class="nav-link" target="_blank" href="https://pusiknas.polri.go.id/Home/LandingPage">SP2HP</a>
                         </li>
                     </ul>
@@ -117,32 +114,33 @@
         <script src="/js/app-template.js"></script>
         <!-- Start of Async Drift Code -->
         <script>
-          !function() {
-            var t;
-            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-            t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-            t.factory = function(e) {
-              return function() {
-                var n;
-                return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-              };
-            }, t.methods.forEach(function(e) {
-              t[e] = t.factory(e);
-            }), t.load = function(t) {
-              var e, n, o, i;
-              e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-              o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-              n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-            });
-          }();
-          drift.SNIPPET_VERSION = '0.3.1';
-          drift.load('47zbfx8khx2s');
+            "use strict";
+            
+            !function() {
+              var t = window.driftt = window.drift = window.driftt || [];
+              if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+                t.factory = function(e) {
+                  return function() {
+                    var n = Array.prototype.slice.call(arguments);
+                    return n.unshift(e), t.push(n), t;
+                  };
+                }, t.methods.forEach(function(e) {
+                  t[e] = t.factory(e);
+                }), t.load = function(t) {
+                  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                  o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                  var i = document.getElementsByTagName("script")[0];
+                  i.parentNode.insertBefore(o, i);
+                };
+              }
+            }();
+            drift.SNIPPET_VERSION = '0.3.1';
+            drift.load('ydv8c6kaa9zv');
         </script>
         <!-- End of Async Drift Code -->
-        <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
+        <script src="/js/getorgchart.js"></script>
         @yield('script')
     </body>
-
-
-<!-- Mirrored from themesdesign.in/brizzle/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Apr 2018 07:46:45 GMT -->
 </html>

@@ -5,6 +5,9 @@
         .get-oc-tb, .get-up{
             display: none;
         }
+        .get-org-chart{
+            height: 2000px !important;
+        }
     </style>
 @endsection 
 
@@ -90,7 +93,7 @@
                                         <td>{{ $item->nama }}</td>
                                         <td>{{ $item->atasan['nama'] }}</td>
                                         <td class="text-center">
-                                            <a class="btn btn-outline-danger" href="/admin/users/hapus-struktur-organisasi/{{ $item->id }}">
+                                            <a class="btn btn-outline-danger" href="/admin/struktur-organisasi/hapus-struktur-organisasi/{{ $item->id }}">
                                                 <i class="la la-trash"></i>
                                             </a>
                                             <a class="btn btn-outline-primary editStrukturOrganisasi">
@@ -110,7 +113,7 @@
 
     </div>
 
-    <div id="strukturOrganisasiChart"></div>
+    <div id="strukturOrganisasiChart" style="height: 1300px"></div>
 
     <!-- MODALS -->
     <div class="iziModal" id="modalStrukturOrganisasi">
@@ -168,15 +171,14 @@
     <script>
         $.ajax({
             method: 'GET',
-            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
+            url: '/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor'
         }).done(function (data) {
             var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
-            theme: "cassandra",
             enableEdit: false,
             enableZoom: false,
-            enableMove: false,
             enableSearch: false,
             scale: 0.5,
+            expandToLevel: 8,
             color: "neutralgrey",
             idField: "id",
             parentIdField: "parent_id",
@@ -190,14 +192,13 @@
     <script>
         $.ajax({
             method: 'GET',
-            url: '/admin/struktur-organisasi/ajax/get-struktur-organisasi'
+            url: '/struktur-organisasi/ajax/get-struktur-organisasi'
         }).done(function (data) {
             var orgchart = new getOrgChart(document.getElementById("strukturOrganisasiChart"), {
             enableEdit: false,
             enableZoom: false,
-            enableMove: false,
             enableSearch: false,
-            scale: 0.5,
+            scale: 0.3,
             color: "neutralgrey",
             idField: "id",
             parentIdField: "parent_id",
@@ -209,6 +210,7 @@
     </script>
     @endif
     <script>
+        $('#strukturTable').DataTable({});
         $('.iziModal').iziModal({
             fullscreen: true,
             title: 'Form Struktur Organisasi',

@@ -16,7 +16,7 @@
                 <div class="post feature-post">
                   <div class="entry-header">
                     <div class="entry-thumbnail">
-                      <img class="img-responsive" src="{{ $item->thumbnail }}" alt="" />
+                      <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 560px!important" alt="" />
                     </div>
                     <div class="catagory world"><a href="#">{{ $item->kategori->kategori }}</a></div>
                   </div>
@@ -44,7 +44,7 @@
               <div class="post feature-post">
                 <div class="entry-header">
                   <div class="entry-thumbnail">
-                    <img class="img-responsive" src="{{ $item->thumbnail }}" alt="" />
+                    <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 177px !important" alt="" />
                   </div>
                   <div class="catagory technology"><span><a href="#">{{ $item->kategori->kategori }}</a></span></div>
                 </div>
@@ -62,6 +62,10 @@
                 </div>
               </div><!--/post-->
             </div>
+            @php $numberOfColumns++ @endphp
+            @if ($numberOfColumns % 3 == 0)
+                <div class="row"></div>
+            @endif
           @endforeach
         </div>
         <div class="row" style="margin-top: 20px;">
@@ -74,9 +78,9 @@
       </div><!--/#content-->
 
       <div class="col-md-3 visible-md visible-lg">
-        <div class="add featured-add">
-          <a href="#"><img class="img-responsive" src="/news/images/post/add/add1.jpg" alt="" /></a>
-        </div>
+        <!--<div class="add featured-add">-->
+        <!--  <a href="#"><img class="img-responsive" src="/news/images/post/add/add1.jpg" alt="" /></a>-->
+        <!--</div>-->
         <div id="sitebar" style="margin-top: 20px;">
 					<div class="widget follow-us">
 						<h1 class="section-title title">Follow Us</h1>
@@ -112,9 +116,9 @@
     </div>
   </div><!--/.section-->
 
-  <div class="section add inner-add">
-    <a href="#"><img class="img-responsive" src="/news/images/post/add/add2.jpg" alt="" /></a>
-  </div><!--/.section-->
+  <!--<div class="section add inner-add">-->
+  <!--  <a href="#"><img class="img-responsive" src="/news/images/post/add/add2.jpg" alt="" /></a>-->
+  <!--</div><!--/.section-->
 
 </div><!--/.container-->
 

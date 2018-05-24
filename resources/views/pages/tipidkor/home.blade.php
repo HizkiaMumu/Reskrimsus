@@ -36,7 +36,7 @@
             <div class="features-title">
               <h5>TINDAK PIDANA KORUPSI <br> POLDA KALIMANTAN TIMUR</h5>
               <p class="mt-3 text-muted">
-                Subdit III Tipidkor adalah salah satu bagian/sub dari Ditreskrimsus yang bertugas melakukan penyelidikan dan penyidikan tindak pidana Perbankan yang terjadi di daerah hukum Polda.
+                Subdit III Tipidkor adalah salah satu bagian/sub dari Ditreskrimsus yang bertugas melakukan penyelidikan dan penyidikan tindak pidana korupsi yang terjadi di daerah hukum Polda.
                 <br><br>
                 Subdit III Tipidkor menyelenggarakan fungsi :
               </p>
@@ -157,12 +157,12 @@
 
           <div class="contact-info mb-5">
             <i class="pe-7s-map-marker mr-3"></i>
-            <p class=""> <span class="contact-heading"> Alamat Kantor </span>:<br> <span class="mt-2">JL.Inpres 1 RT.24 NO.10, Balikpapan</span></p>
+            <p class=""> <span class="contact-heading"> Alamat Kantor </span>:<br> <span class="mt-2">Jalan Syarifuddin Yoes No.99, Sepinggan, Balikpapan Selatan, Gn. Bahagia, Balikpapan Sel., Kota Balikpapan, Kalimantan Timur 76115</span></p>
           </div>
 
           <div class="contact-info mb-5">
             <i class=" pe-7s-mail-open mr-3"></i>
-            <p class=""> <span class="contact-heading"> Email Address </span> :<br> <span class="mt-2">emailsaya@gmail.com</span></p>
+            <p class=""> <span class="contact-heading"> Email Address </span> :<br> <span class="mt-2">tipidkor@reskrimsuskaltim.com</span></p>
           </div>
         </div>
 

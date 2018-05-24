@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-template.css" />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.css">
+    <link rel="stylesheet" href="css/getorgchart.css">
     @yield('style')
 
 </head>
@@ -59,17 +59,17 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#home">HOME</a>
+                            <a class="nav-link" href="/">HOME</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#htck">HTCK</a>
+                            <a class="nav-link" href="/htck">HTCK</a>
                         </li>
 
                         <li class="nav-item">
                           <div class="btn-group">
                             <a class="nav-link dropdown-toggle pointerHover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              SUBDIT
+                              SUBSATKER
                             </a>
                             <div class="dropdown-menu" style="background: #262829 !important;">
                               <a class="dropdown-item" href="#">Subdit I (INDAGSI)</a>
@@ -129,7 +129,7 @@
         <script src="js/switcher.js"></script>
         <!-- Custom js -->
         <script src="js/app-template.js"></script>
-        <script src="http://www.getorgchart.com/GetOrgChart/getorgchart/getorgchart.js"></script>
+        <script src="js/getorgchart.js"></script>
         @yield('script')
     </body>
 

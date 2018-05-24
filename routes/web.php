@@ -2,6 +2,8 @@
 
 // Pages --
 Route::get('/', 'PagesController@home');
+// HTCK
+Route::get('/htck', 'PagesController@htck');
 // Struktur Organisasi Reskrimsus Pages
 Route::get('/struktur-organisasi', 'PagesController@strukturOrganisasi');
 // Bagbinops
@@ -21,6 +23,8 @@ Route::get('/tipidkor/news/{id}', 'TipidkorNewsController@readNews');
 Route::get('/tipidkor/news/kategori/{kategori}', 'TipidkorNewsController@categoryFilter');
 // Tipidkor Zona Integritas
 Route::get('/tipidkor/zona-integritas', 'PagesController@zonaIntegritas');
+Route::get('/tipidkor/zona-integritas/wbs', 'PagesController@detailWbs');
+Route::get('/tipidkor/zona-integritas/wbs/lapor', 'PagesController@laporWbs');
 Route::get('/tipidkor/zona-integritas/{id}', 'PagesController@detailAprb');
 Route::post('/tipidkor/zona-integritas/wbs/tambah-wbs', 'ZiController@tambahWbs');
 // -- End Pages
@@ -93,12 +97,13 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin/zi/aprb/delete-aprb/{id}', 'ZiController@deleteAPRB');
   Route::get('/admin/zi/aprb/detail-aprb/{id}', 'ZiController@detailAprb');
   Route::get('/admin/zi/wbs/hapus-wbs/{id}', 'ZiController@hapusWbs');
+  Route::post('/admin/zi/paparan/tambah-paparan', 'ZiController@tambahPaparan');
   //
 
 });
 // -- End Dashboard
 
 // AJAX
-Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
-Route::get('/admin/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor', 'StrukturOrganisasiController@getStrukturOrganisasiTipidkor');
+Route::get('/struktur-organisasi/ajax/get-struktur-organisasi', 'StrukturOrganisasiController@getStrukturOrganisasi');
+Route::get('/struktur-organisasi/ajax/get-struktur-organisasi-tipidkor', 'StrukturOrganisasiController@getStrukturOrganisasiTipidkor');
 // -- END AJAX

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use App\PaparanPembangunanZi;
 use App\Wbs;
 use App\Zi;
 
@@ -70,6 +72,20 @@ class ZiController extends Controller
       $wbs = Wbs::findOrFail($id);
       $wbs->delete();
       return redirect()->back()->with("OK", "Berhasil menghapus laporan");
+    }
+
+    public function tambahPaparan(Request $request){
+      $data = $request->all();
+      if($request->hasFile('file')){
+        $path = $request->file('file')->store('/public/file'); // with /public on path
+        $filename = $request->file('file')->hashName(); // remove the /public on path
+        $validPath = '/storage/file/' . $filename;
+        $data['file'] = $validPath;
+        $wbs = PaparanPembangunanZi::create($data);
+        return redirect()->back()->with("OK", "Berhasil mengupload paparan");
+      } else {
+        return redirect()->back()->with("ERR", "Gagal mengupload paparan");
+      }
     }
 
 }

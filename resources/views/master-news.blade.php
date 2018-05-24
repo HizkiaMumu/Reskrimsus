@@ -40,14 +40,17 @@
 			<div class="navbar" role="banner">
 				<div class="container">
 					<a class="secondary-logo" href="/tipidkor/news">
-						<img class="img-responsive" src="/images/logo_polda.png" alt="logo" style="height: 40px; width: auto; padding-left: 10px; padding-bottom: 5px;">
+					    <img class="img-responsive" src="/images/logo_polda.png" alt="logo" style="height: 40px; width: auto; padding-left: 10px; padding-bottom: 5px;">
 					</a>
 				</div>
 				<div class="topbar">
 					<div class="container">
 						<div id="topbar" class="navbar-header">
 							<a class="navbar-brand" href="/tipidkor/news">
-								<img class="main-logo img-responsive" src="/images/logo_polda.png" alt="logo" style="height: 40px; width: auto; padding-left: 10px;">
+							    <div class="row">
+								    <img class="main-logo img-responsive col-md-6" src="/images/logo_polda.png" alt="logo" style="height: 40px; width: auto; padding-left: 10px;">
+							        <p class="col-md-6">TIPIDKOR NEWS</p>
+							    </div>
 							</a>
 							<div id="topbar-right">
 								<div id="date-time"></div>
