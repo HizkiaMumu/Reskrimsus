@@ -51,15 +51,18 @@
                   </div><!--/.section-->
                 </div><!--/.left-content-->
               </div>
+
+
+
             </div>
           </div><!--/#site-content-->
           <div class="row">
             <div class="col-sm-12">
-              {{-- <div class="post google-add">
+              <div class="post google-add">
                 <div class="add inner-add text-center">
                   <a href="#"><img class="img-responsive" src="images/post/google-add.jpg" alt=""></a>
                 </div><!--/.section-->
-              </div><!--/.google-add--> --}}
+              </div><!--/.google-add-->
 
               <div class="comments-wrapper">
                 <h1 class="section-title title">Comments</h1>
@@ -70,28 +73,26 @@
                 <h1 class="section-title">Artikel terkait</h1>
                 <div class="row">
                   @foreach($artikel_terkait as $item)
-                    @if ($item->user->subdit == 'tipidkor' || $item->user->subdit == 'ditreskrimsus')
-                      <div class="col-sm-4">
-                          <div class="post medium-post">
-                        <div class="entry-header">
-                          <div class="entry-thumbnail">
-                            <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 177px !important;" alt="{{ $item->title }}">
-                          </div>
+                    <div class="col-sm-4">
+                        <div class="post medium-post">
+                      <div class="entry-header">
+                        <div class="entry-thumbnail">
+                          <img class="img-responsive" src="{{ $item->thumbnail }}" style="height: 177px !important;" alt="{{ $item->title }}">
                         </div>
-                        <div class="post-content">
-                          <div class="entry-meta">
-                            <ul class="list-inline">
-                              <li class="publish-date"><a href="#"><i class="fa fa-clock-o"></i> Nov 15, 2015 </a></li>
-                              <li class="views"><a href="#"><i class="fa fa-eye"></i>15k</a></li>
-                              <li class="loves"><a href="#"><i class="fa fa-heart-o"></i>278</a></li>
-                            </ul>
-                          </div>
-                          <h2 class="entry-title">
-                            <a href="/tipidkor/news/{{ $item->id }}">{{ $item->title }}</a>
-                          </h2>
+                      </div>
+                      <div class="post-content">
+                        <div class="entry-meta">
+                          <ul class="list-inline">
+                            <li class="publish-date"><a href="#"><i class="fa fa-clock-o"></i> Nov 15, 2015 </a></li>
+                            <li class="views"><a href="#"><i class="fa fa-eye"></i>15k</a></li>
+                            <li class="loves"><a href="#"><i class="fa fa-heart-o"></i>278</a></li>
+                          </ul>
                         </div>
-                      </div><!--/post-->
-                    @endif
+                        <h2 class="entry-title">
+                          <a href="/tipidkor/news/{{ $item->id }}">{{ $item->title }}</a>
+                        </h2>
+                      </div>
+                    </div><!--/post-->
                     </div>
                     @php $numberOfColumns++ @endphp
                     @if ($numberOfColumns % 3 == 0)

@@ -13,4 +13,9 @@ class Berita extends Model
       return $this->belongsTo('App\Kategori');
     }
 
+    public function user()
+    {
+      return $this->belongsTo('App\User');
+    }
+
 }

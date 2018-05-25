@@ -13,7 +13,6 @@
           <div class="col-sm-12">
             <div id="home-slider">
               @foreach($berita_baru as $item)
-                @if ($item->user->subdit == 'tipidkor' || $item->user->subdit == 'ditreskrimsus')
                 <div class="post feature-post">
                   <div class="entry-header">
                     <div class="entry-thumbnail">
@@ -34,14 +33,13 @@
                       <a href="/tipidkor/news/{{ $item->id }}">{{ $item->title }}</a>
                     </h2>
                   </div>
-                </div><!--/post--> 
-                @endif
+                </div><!--/post-->
               @endforeach
             </div>
           </div>
         </div>
         <div class="row">
-          @foreach($berita as $item)
+          @foreach($berita->slice(0, 6) as $item)
             <div class="col-sm-4">
               <div class="post feature-post">
                 <div class="entry-header">
